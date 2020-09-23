@@ -24,7 +24,7 @@ html {
   background-color: lightgrey;
 }
 .second-row iframe {
-  display: center;
+  display: block;
   width: 130vh;
   height: 100%;
   border-color: black;
