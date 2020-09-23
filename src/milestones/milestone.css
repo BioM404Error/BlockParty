@@ -16,7 +16,7 @@ html {
   border-color: black;
 }
 .second-row {
-  position: absolute;
+  position: center;
   top: 100px;
   left: 0;
   right: 0;
@@ -24,7 +24,7 @@ html {
   background-color: lightgrey;
 }
 .second-row iframe {
-  display: block;
+  display: inline;
   width: 130vh;
   height: 100%;
   border-color: black;
