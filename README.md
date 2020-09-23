@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Visit us at https://block-party.vercel.app/
 
+For the beta version of our site visit https://block-party-beta.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
