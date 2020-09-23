@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Milestone1Embedded from "./milestones/milestone1embedded";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World</p>
+      <Milestone1Embedded />
     </div>
   );
 }
