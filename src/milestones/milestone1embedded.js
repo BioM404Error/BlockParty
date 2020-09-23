@@ -3,7 +3,7 @@ import "./milestone.css";
 
 export default function Milestone1Embedded() {
   return (
-    <div>
+    <div class ="milestone">
       <div class="first-row">
         <h1>Milestone 01</h1>
       </div>
