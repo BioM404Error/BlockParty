@@ -13,4 +13,3 @@ export default function Milestone1Embedded() {
     </div>
   );
 }
-git;
