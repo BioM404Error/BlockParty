@@ -6,6 +6,9 @@ html {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.milestone {
+  position: center;
+}
 .first-row {
   position: absolute;
   top: 0;
