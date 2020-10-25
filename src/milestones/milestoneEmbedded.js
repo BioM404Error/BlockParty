@@ -1,5 +1,5 @@
 import React from "react";
-// import "./milestone.css";
+import "./milestone.css";
 
 export default function MilestoneEmbedded(props) {
   return (
