@@ -2,7 +2,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Visit us at https://block-party.vercel.app/
 
+<<<<<<< HEAD
 For the beta version of our site visit https://block-party-beta.vercel.app/
+=======
+For the beta version of our site visit us at https://block-party-beta.vercel.app/
+
+For our project milestones, please visit us at https://block-party-milestones.vercel.app/
+
+## Survey Link at https://forms.gle/1FHAjp3aFjd9uWZ79
+>>>>>>> b98cf545c5e67ead9bc6bf31e65502ba9f71cc32
 
 ## Available Scripts
 
