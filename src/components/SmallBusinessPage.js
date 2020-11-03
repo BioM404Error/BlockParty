@@ -6,13 +6,16 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
 
 export default function SmallBusinessPage(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
   };
+
   const handleShow = () => setShow(true);
+
   return (
     <div>
       <Card>
@@ -77,7 +80,7 @@ export default function SmallBusinessPage(props) {
               </Form.Label>
               <Form.Control as="textarea" rows={3}></Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" as={Link} to="/smallbusiness/thankyou">
               Send
             </Button>
           </Form>
