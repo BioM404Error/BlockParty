@@ -22,8 +22,17 @@ export default function SmallBusinessPage(props) {
         <Card.Body>
           <h1>Benefits of Joining Us</h1>
           <p>
-            Description of what we offer to help small businesses and why we
-            want to help...
+           Small Business's are the heart of every community. They go the extra
+            mile, and have always been there for their communities. On The Block
+            wants to return the favor, and be there for them. When you join us,
+            your small business will be filtered by what type of business you
+            have: Cosmetics, Entertinment, Food, or Clothing. When a user enters
+            our site, they will be able to view your business, and decide if
+            they want you at their Block Party. If your business is selected and
+            purchased, your bussiness will recieve payment for your services.
+            When you are at the users Block Party, you will have the chance to
+            be seen by many different people and spread your business magic to a
+            larger audience.
           </p>
           <Button variant="primary" onClick={handleShow}>
             Join Us!
