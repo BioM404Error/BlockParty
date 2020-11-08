@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -7,8 +7,11 @@ import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { useHistory } from "react-router-dom";
+import Context from "../context/context";
 
 export default function SpecificationPage(props) {
+  const context = useContext(Context);
+
   const [startTime, setStartTime] = useState(undefined);
   const [endTime, setEndTime] = useState(undefined);
   const [show, setShow] = useState(false);
@@ -73,7 +76,8 @@ export default function SpecificationPage(props) {
         setWarning("Please input a date in the future");
         handleShow();
       } else {
-        history.push("/permit");
+        history.push("/selections");
+        context.changeCity.bind(this, city);
       }
     }
   };

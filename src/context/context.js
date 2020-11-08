@@ -11,4 +11,5 @@ export default React.createContext({
   cart: [],
   addProductToCart: (product) => {},
   removeProductFromCart: (productId) => {},
+  changeCity: (city) => {},
 });

@@ -8,6 +8,8 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Context from "../context/context";
 import Cart from "./Cart";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export default function Category(props) {
   const context = useContext(Context);
@@ -26,7 +28,7 @@ export default function Category(props) {
           {context.startTime} - {context.endTime}
         </p>
         <Button variant="primary" onClick={handleShow}>
-          Cart
+          View <FontAwesomeIcon icon={faShoppingCart} /> ({context.cart.length})
         </Button>
       </div>
       <Card style={{ margin: "2rem" }}>
