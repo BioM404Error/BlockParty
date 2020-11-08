@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import SmallBusinessPage from "./components/SmallBusinessPage";
 import ThanksSmallBusiness from "./components/ThanksSmallBusiness";
+import Landing from "./components/Landing"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function App() {
             <SmallBusinessPage />
           </Route>
           <Route exact path="/">
-            <h1>Home Page TBD...</h1>
+            <Landing />
           </Route>
         </Switch>
       </Router>
