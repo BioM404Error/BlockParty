@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import SmallBusinessPage from "./components/SmallBusinessPage";
 import ThanksSmallBusiness from "./components/ThanksSmallBusiness";
+import Reciept from "./components/RecieptPage"
+import Payment from "./components/PaymentPage"
+import Thankyou from "./components/thankyou"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,7 +20,16 @@ function App() {
             <SmallBusinessPage />
           </Route>
           <Route exact path="/">
-            <h1>Home Page TBD...</h1>
+            <h1> UNDER CONSTRUCTION</h1>
+          </Route>
+          <Route exact path="/reciept">
+            <Reciept />
+          </Route>
+          <Route exact path="/payment">
+            <Payment />
+          </Route>
+          <Route exact path="/thankyou">
+            <Thankyou />
           </Route>
         </Switch>
       </Router>

@@ -5,7 +5,7 @@ function clickMe() {
 function clickMe1() {
   alert("Goes back to Receipt");
 }
-function permit() {
+function Thankyou() {
   return (
     <div className="permit">
       <h1 class="main-title">Thank You!</h1>
@@ -15,4 +15,4 @@ function permit() {
     </div>
   );
 }
-export default permit;
+export default Thankyou;
