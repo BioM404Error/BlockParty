@@ -20,7 +20,7 @@ function App() {
             <SmallBusinessPage />
           </Route>
           <Route exact path="/">
-            <Home />
+            <h1> UNDER CONSTRUCTION</h1>
           </Route>
           <Route exact path="/reciept">
             <Reciept />
