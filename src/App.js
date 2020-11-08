@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/smallbusiness">
             <SmallBusinessPage />
           </Route>
-          <Route exact path="/location">
+          <Route exact path="/locations">
             <Locations />
           </Route>
           <Route exact path="/">
