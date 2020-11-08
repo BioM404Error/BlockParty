@@ -1,5 +1,7 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+// export const CHANGE_CITY = "CHANGE_CITY";
+// export const CHANGE_BUDGET = "CHANGE_BUDGET";
 
 const addProductToCart = (product, state) => {
   const updatedCart = [...state.cart];

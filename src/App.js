@@ -32,16 +32,16 @@ function App() {
             <Route exact path="/selections">
               <SelectionsPage />
             </Route>
-            <Route exact path="/selections/food">
+            <Route exact path="/selections/Food">
               <Category type="Food" />
             </Route>
-            <Route exact path="/selections/cosmetics">
+            <Route exact path="/selections/Cosmetics">
               <Category type="Cosmetics" />
             </Route>
-            <Route exact path="/selections/clothing">
+            <Route exact path="/selections/Clothing">
               <Category type="Clothing" />
             </Route>
-            <Route exact path="/selections/entertainment">
+            <Route exact path="/selections/Entertainment">
               <Category type="Entertainment" />
             </Route>
             <Route exact path="/thankyou">

@@ -8,16 +8,16 @@ export default function SelectionPage() {
     <div>
       <h1>Selections</h1>
       <Card>
-        <Button variant="secondary" as={Link} to="/selections/entertainment">
+        <Button variant="secondary" as={Link} to="/selections/Entertainment">
           Entertainment
         </Button>
-        <Button variant="light" as={Link} to="/selections/food">
+        <Button variant="light" as={Link} to="/selections/Food">
           Food
         </Button>
-        <Button variant="secondary" as={Link} to="/selections/clothing">
+        <Button variant="secondary" as={Link} to="/selections/Clothing">
           Clothing
         </Button>
-        <Button variant="light" as={Link} to="/selections/cosmetics">
+        <Button variant="light" as={Link} to="/selections/Cosmetics">
           Cosmetics
         </Button>
       </Card>

@@ -1,14 +1,10 @@
-import React, { useContext, useEffect } from "react";
-import ShopContext from "../context/shop-context";
+import React, { useContext } from "react";
+import Context from "../context/context";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 
 export default function Cart(props) {
-  const context = useContext(ShopContext);
-
-  useEffect(() => {
-    console.log(context);
-  }, []);
+  const context = useContext(Context);
 
   return (
     <React.Fragment>

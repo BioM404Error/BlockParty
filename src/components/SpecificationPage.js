@@ -43,14 +43,18 @@ export default function SpecificationPage(props) {
       handleShow();
     } else {
       let today = new Date();
+      console.log(today);
       let todayDd = parseInt(today.getDate());
       let todayMm = parseInt(today.getMonth() + 1);
       let todayYyyy = parseInt(today.getFullYear());
 
+      const weekday = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
       let userDate = new Date(date);
+      console.log(userDate);
       let userDd = parseInt(userDate.getDate());
       let userMm = parseInt(userDate.getMonth() + 1);
       let userYyyy = parseInt(userDate.getFullYear());
+      let userDay = weekday[userDate.getDay()];
 
       const startArray = startTime.split(":").map((item) => parseInt(item));
       const endArray = endTime.split(":").map((item) => parseInt(item));
@@ -129,7 +133,7 @@ export default function SpecificationPage(props) {
                   type="date"
                   name="date"
                   placeholder="Party Date"
-                  onChange={(e) => setDate(e.target.value)}
+                  onChange={(e) => setDate(e.target.value + "T00:00:00")}
                 />
               </Col>
             </Form.Group>

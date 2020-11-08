@@ -1,31 +1,42 @@
 import React, { useReducer } from "react";
-import ShopContext from "./shop-context";
+import Context from "./context";
+import { businesses } from "./businesses";
 import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./reducers";
 
 const GlobalState = (props) => {
-  const products = [
-    { id: "1a", name: "Jazzy Beats", price: 450.0 },
-    { id: "2a", name: "Julie + Ghosts", price: 500.0 },
-    { id: "3a", name: "Loco", price: 200.0 },
-    { id: "4a", name: "Zay Beats", price: 1000.0 },
-  ];
+  const products = businesses;
+
+  const location = "Santa Cruz";
+
+  const startTime = [8, 0];
+
+  const endTime = [24, 0];
+
+  const budget = 1000;
+
+  const capacity = 1000;
+
+  const day = "Sun";
+
   const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
 
   const addProductToCart = (product) => {
-    setTimeout(() => {
-      dispatch({ type: ADD_PRODUCT, product: product });
-    }, 700);
+    dispatch({ type: ADD_PRODUCT, product: product });
   };
 
   const removeProductFromCart = (productId) => {
-    setTimeout(() => {
-      dispatch({ type: REMOVE_PRODUCT, productId: productId });
-    }, 700);
+    dispatch({ type: REMOVE_PRODUCT, productId: productId });
   };
 
   return (
-    <ShopContext.Provider
+    <Context.Provider
       value={{
+        location: location,
+        budget: budget,
+        day: day,
+        endTime: endTime,
+        startTime: startTime,
+        capacity: capacity,
         products: products,
         cart: cartState.cart,
         addProductToCart: addProductToCart,
@@ -33,7 +44,7 @@ const GlobalState = (props) => {
       }}
     >
       {props.children}
-    </ShopContext.Provider>
+    </Context.Provider>
   );
 };
 
