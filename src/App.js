@@ -2,26 +2,52 @@ import React from "react";
 import "./App.css";
 import SmallBusinessPage from "./components/SmallBusinessPage";
 import ThanksSmallBusiness from "./components/ThanksSmallBusiness";
+import SelectionsPage from "./components/SelectionsPage";
+import Category from "./components/Category";
+import GlobalState from "./context/GlobalState";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/smallbusiness/thankyou">
-            <ThanksSmallBusiness />
-          </Route>
-          <Route exact path="/smallbusiness">
-            <SmallBusinessPage />
-          </Route>
-          <Route exact path="/">
-            <h1>Home Page TBD...</h1>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <GlobalState>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/smallbusiness/thankyou">
+              <ThanksSmallBusiness />
+            </Route>
+            <Route exact path="/smallbusiness">
+              <SmallBusinessPage />
+            </Route>
+            <Route exact path="/selections">
+              <SelectionsPage />
+            </Route>
+            <Route exact path="/selections/food">
+              <Category type="Food" />
+            </Route>
+            <Route exact path="/selections/cosmetics">
+              <Category type="Cosmetics" />
+            </Route>
+            <Route exact path="/selections/clothing">
+              <Category type="Clothing" />
+            </Route>
+            <Route exact path="/selections/entertainment">
+              <Category type="Entertainment" />
+            </Route>
+            <Route exact path="/payment">
+              <h1>Payments tbd...</h1>
+            </Route>
+            <Route exact path="/location">
+              <h1>Location tbd...</h1>
+            </Route>
+            <Route exact path="/">
+              <h1>Home Page TBD...</h1>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </GlobalState>
   );
 }
 
