@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/payment">
             <Payment />
           </Route>
-          <Route exact path="/thankyou!">
+          <Route exact path="/thankyou">
             <Thankyou />
           </Route>
         </Switch>

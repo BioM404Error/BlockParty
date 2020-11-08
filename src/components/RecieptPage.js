@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 
-export default function RecieptPage(props) {
+export default function Reciept(props) {
     const [show, setShow] = useState(false);
     const [email, setEmail] = useState(undefined);
     const [phone, setPhone] = useState(undefined);
@@ -159,7 +159,7 @@ export default function RecieptPage(props) {
                   </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="primary" as={Link} to="/thankyou!">
+                <Button variant="primary" as={Link} to="/thankyou">
                     Send
                 </Button>
             </Modal.Footer>
