@@ -6,15 +6,19 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
+import { useHistory } from "react-router-dom";
 
 export default function SpecificationPage(props) {
   const [startTime, setStartTime] = useState(undefined);
   const [endTime, setEndTime] = useState(undefined);
   const [show, setShow] = useState(false);
+  const [budget, setBudget] = useState(0);
   const [warning, setWarning] = useState("");
   const [date, setDate] = useState(undefined);
   const [people, setPeople] = useState(0);
   const [city, setCity] = useState("Choose...");
+
+  const history = useHistory();
 
   const handleClose = () => {
     setShow(false);
@@ -33,6 +37,9 @@ export default function SpecificationPage(props) {
       handleShow();
     } else if (people <= 0) {
       setWarning("Please input an estimated number of attendees");
+      handleShow();
+    } else if (budget <= 0) {
+      setWarning("Please input a budget");
       handleShow();
     } else {
       let today = new Date();
@@ -62,7 +69,7 @@ export default function SpecificationPage(props) {
         setWarning("Please input a date in the future");
         handleShow();
       } else {
-        alert("success!");
+        history.push("/permit");
       }
     }
   };
@@ -145,22 +152,19 @@ export default function SpecificationPage(props) {
                 </Form.Control>
               </Col>
             </Form.Group>
-
-            {/* 
-        Dont think they need a budget because they can see the price as they add things to their cart
-        <Form>
-            <Form.Group as={Row}>
+            <Form>
+              <Form.Group as={Row}>
                 <Form.Label column sm="2">
-                Your Budget
+                  Your Budget
                 </Form.Label>
                 <Col sm="10">
-                <Form.Control 
-                type="number"
-                onChange={e => setBudget(e.target.value)} 
-                 />
+                  <Form.Control
+                    type="number"
+                    onChange={(e) => setBudget(e.target.value)}
+                  />
                 </Col>
-            </Form.Group>
-        </Form> */}
+              </Form.Group>
+            </Form>
           </Card.Body>
         </Card>
         <Button variant="seconday">Back</Button>

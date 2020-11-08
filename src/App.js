@@ -5,6 +5,9 @@ import ThanksSmallBusiness from "./components/ThanksSmallBusiness";
 import SelectionsPage from "./components/SelectionsPage";
 import Category from "./components/Category";
 import GlobalState from "./context/GlobalState";
+import Permit from "./components/PermitPage";
+import ThankYou from "./components/ThankYou";
+import SpecificationPage from "./components/SpecificationPage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,6 +17,12 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
+            <Route exact path="/permit">
+              <Permit />
+            </Route>
+            <Route exact path="/specification">
+              <SpecificationPage />
+            </Route>
             <Route exact path="/smallbusiness/thankyou">
               <ThanksSmallBusiness />
             </Route>
@@ -34,6 +43,9 @@ function App() {
             </Route>
             <Route exact path="/selections/entertainment">
               <Category type="Entertainment" />
+            </Route>
+            <Route exact path="/thankyou">
+              <ThankYou />
             </Route>
             <Route exact path="/payment">
               <h1>Payments tbd...</h1>
