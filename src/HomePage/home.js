@@ -7,7 +7,6 @@ export default function Milestone1Embedded() {
     <div class ="home-page">
       <div class = "nav-bar">
           <NavBar />
-          <h1> Hello World</h1>
       </div>
     </div>
   );
