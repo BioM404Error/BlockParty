@@ -42,11 +42,14 @@ export default function Category(props) {
 
   return (
     <React.Fragment>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div
+        style={{
+          margin: "1rem",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
         <h1>{props.type}</h1>
-        <p>
-          {context.startTime} - {context.endTime}
-        </p>
         <Button variant="primary" onClick={handleCartShow}>
           View <FontAwesomeIcon icon={faShoppingCart} /> ({context.cart.length})
         </Button>
@@ -70,7 +73,6 @@ export default function Category(props) {
             )
             .map((option) => (
               <ListGroup.Item key={option.id}>
-                <p>{option.location}</p>
                 <Option
                   name={option.name}
                   price={option.price}
@@ -88,7 +90,7 @@ export default function Category(props) {
         </ListGroup>
       </Card>
       <Button variant="light" as={Link} to="/selections">
-        Selections
+        Return to Selection
       </Button>
 
       <Modal show={showCart} onHide={handleCartClose}>
