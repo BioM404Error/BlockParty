@@ -77,7 +77,7 @@ export default function SpecificationPage(props) {
         handleShow();
       } else {
         history.push("/selections");
-        context.changeCity.bind(this, city);
+        context.changeCity(city, context);
       }
     }
   };
