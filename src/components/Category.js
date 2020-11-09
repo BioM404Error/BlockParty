@@ -10,15 +10,35 @@ import Context from "../context/context";
 import Cart from "./Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import OptionInformationModal from "./OptionInformationModal";
 
 export default function Category(props) {
   const context = useContext(Context);
-  const [show, setShow] = useState(false);
-  const handleClose = () => {
-    setShow(false);
+  const [selectedOption, setSelectedOption] = useState(undefined);
+  const handleCartShow = () => setShowCart(true);
+
+  const [showCart, setShowCart] = useState(false);
+  const handleCartClose = () => {
+    setShowCart(false);
   };
 
-  const handleShow = () => setShow(true);
+  const [showOption, setShowOption] = useState(false);
+  const handleOptionClose = () => {
+    setShowOption(false);
+  };
+  const handleOptionShow = (option) => {
+    setSelectedOption(option);
+    setShowOption(true);
+  };
+
+  //users cant access this page without setting a time first but
+  //for the sake of testing and styling this page it will default to 24 hours
+  const partyStartTime = context.startTime
+    ? context.startTime.split(":").map((item) => parseInt(item))
+    : [0, 0];
+  const partyEndTime = context.endTime
+    ? context.endTime.split(":").map((item) => parseInt(item))
+    : [24, 0];
 
   return (
     <React.Fragment>
@@ -27,7 +47,7 @@ export default function Category(props) {
         <p>
           {context.startTime} - {context.endTime}
         </p>
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="primary" onClick={handleCartShow}>
           View <FontAwesomeIcon icon={faShoppingCart} /> ({context.cart.length})
         </Button>
       </div>
@@ -37,19 +57,19 @@ export default function Category(props) {
             .filter(
               (option) =>
                 option.type === props.type &&
-                option.daysOpen[context.day] &&
+                option.daysOpen[context.weekday] &&
                 option.location === context.location &&
                 !(
-                  option.startTime[0] <= context.startTime[0] &&
-                  option.endTime[0] <= context.startTime[0]
+                  option.startTime[0] <= partyStartTime[0] &&
+                  option.endTime[0] <= partyStartTime[0]
                 ) &&
                 !(
-                  option.startTime[0] >= context.endTime[0] &&
-                  option.endTime[0] >= context.endTime[0]
+                  option.startTime[0] >= partyEndTime[0] &&
+                  option.endTime[0] >= partyEndTime[0]
                 )
             )
             .map((option) => (
-              <ListGroup.Item>
+              <ListGroup.Item key={option.id}>
                 <p>{option.location}</p>
                 <Option
                   name={option.name}
@@ -59,7 +79,9 @@ export default function Category(props) {
                   photo={option.photo}
                   startTime={option.startTime}
                   endTime={option.endTime}
-                  onClick={context.addProductToCart.bind(this, option)}
+                  daysOpen={option.daysOpen}
+                  handleOptionShow={() => handleOptionShow(option)}
+                  addProduct={context.addProductToCart.bind(this, option)}
                 />
               </ListGroup.Item>
             ))}
@@ -68,7 +90,8 @@ export default function Category(props) {
       <Button variant="light" as={Link} to="/selections">
         Selections
       </Button>
-      <Modal show={show} onHide={handleClose}>
+
+      <Modal show={showCart} onHide={handleCartClose}>
         <Modal.Header closeButton>
           <Modal.Title>Cart</Modal.Title>
         </Modal.Header>
@@ -76,6 +99,12 @@ export default function Category(props) {
           <Cart />
         </Modal.Body>
       </Modal>
+
+      <OptionInformationModal
+        show={showOption}
+        selectedOption={selectedOption}
+        onHide={handleOptionClose}
+      />
     </React.Fragment>
   );
 }

@@ -12,14 +12,14 @@ import Context from "../context/context";
 export default function SpecificationPage(props) {
   const context = useContext(Context);
 
-  const [startTime, setStartTime] = useState(undefined);
-  const [endTime, setEndTime] = useState(undefined);
+  const [startTime, setStartTime] = useState(context.startTime);
+  const [endTime, setEndTime] = useState(context.endTime);
   const [show, setShow] = useState(false);
-  const [budget, setBudget] = useState(0);
+  const [budget, setBudget] = useState(context.budget);
   const [warning, setWarning] = useState("");
-  const [date, setDate] = useState(undefined);
-  const [people, setPeople] = useState(0);
-  const [city, setCity] = useState("Choose...");
+  const [date, setDate] = useState(context.date);
+  const [capacity, setCapacity] = useState(context.capacity);
+  const [city, setCity] = useState(context.location);
 
   const history = useHistory();
 
@@ -38,7 +38,7 @@ export default function SpecificationPage(props) {
     ) {
       setWarning("Please input a value in all fields");
       handleShow();
-    } else if (people <= 0) {
+    } else if (capacity <= 0) {
       setWarning("Please input an estimated number of attendees");
       handleShow();
     } else if (budget <= 0) {
@@ -46,14 +46,12 @@ export default function SpecificationPage(props) {
       handleShow();
     } else {
       let today = new Date();
-      console.log(today);
       let todayDd = parseInt(today.getDate());
       let todayMm = parseInt(today.getMonth() + 1);
       let todayYyyy = parseInt(today.getFullYear());
 
       const weekday = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
       let userDate = new Date(date);
-      console.log(userDate);
       let userDd = parseInt(userDate.getDate());
       let userMm = parseInt(userDate.getMonth() + 1);
       let userYyyy = parseInt(userDate.getFullYear());
@@ -75,9 +73,21 @@ export default function SpecificationPage(props) {
       ) {
         setWarning("Please input a date in the future");
         handleShow();
+      } else if (userYyyy - todayYyyy > 5) {
+        setWarning(
+          "Block party cannot be planned more than 5 year in advance..."
+        );
+        handleShow();
       } else {
-        history.push("/selections");
         context.changeCity(city, context);
+        context.changeDate(date.split("T")[0], context);
+        context.changeWeekday(userDay, context);
+        context.changeCapacity(capacity, context);
+        context.changeBudget(budget, context);
+        context.changeStartTime(startTime, context);
+        context.changeEndTime(endTime, context);
+        context.clearCart([], context);
+        history.push("/permit");
       }
     }
   };
@@ -96,9 +106,9 @@ export default function SpecificationPage(props) {
               </Form.Label>
               <Col sm="10">
                 <Form.Control
-                  onChange={(e) => setPeople(e.target.value)}
+                  onChange={(e) => setCapacity(e.target.value)}
                   type="number"
-                  defaultValue={0}
+                  defaultValue={capacity}
                 />
               </Col>
             </Form.Group>
@@ -112,6 +122,7 @@ export default function SpecificationPage(props) {
                   type="time"
                   name="startTime"
                   placeholder="Start Time"
+                  defaultValue={startTime}
                 />
               </Col>
             </Form.Group>
@@ -125,6 +136,7 @@ export default function SpecificationPage(props) {
                   type="time"
                   name="endTime"
                   placeholder="End Time"
+                  defaultValue={endTime}
                 />
               </Col>
             </Form.Group>
@@ -138,6 +150,8 @@ export default function SpecificationPage(props) {
                   name="date"
                   placeholder="Party Date"
                   onChange={(e) => setDate(e.target.value + "T00:00:00")}
+                  max="2050-12-31"
+                  defaultValue={date}
                 />
               </Col>
             </Form.Group>
@@ -152,6 +166,7 @@ export default function SpecificationPage(props) {
                   id="inlineFormCustomSelect"
                   custom
                   onChange={(e) => setCity(e.target.value)}
+                  defaultValue={city}
                 >
                   <option>Choose...</option>
                   <option>Sacramento</option>
@@ -160,19 +175,18 @@ export default function SpecificationPage(props) {
                 </Form.Control>
               </Col>
             </Form.Group>
-            <Form>
-              <Form.Group as={Row}>
-                <Form.Label column sm="2">
-                  Your Budget
-                </Form.Label>
-                <Col sm="10">
-                  <Form.Control
-                    type="number"
-                    onChange={(e) => setBudget(e.target.value)}
-                  />
-                </Col>
-              </Form.Group>
-            </Form>
+            <Form.Group as={Row}>
+              <Form.Label column sm="2">
+                Your Budget
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="number"
+                  onChange={(e) => setBudget(e.target.value)}
+                  defaultValue={budget}
+                />
+              </Col>
+            </Form.Group>
           </Card.Body>
         </Card>
         <Button variant="seconday">Back</Button>

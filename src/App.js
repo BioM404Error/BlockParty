@@ -8,7 +8,8 @@ import GlobalState from "./context/GlobalState";
 import Permit from "./components/PermitPage";
 import ThankYou from "./components/ThankYou";
 import SpecificationPage from "./components/SpecificationPage";
-
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -51,7 +52,15 @@ function App() {
               <h1>Payments tbd...</h1>
             </Route>
             <Route exact path="/location">
-              <h1>Location tbd...</h1>
+              <div>
+                <h1>Location tbd...</h1>
+                <Button variant="secondary" as={Link} to="/permit">
+                  Back
+                </Button>
+                <Button variant="primary" as={Link} to="/selections">
+                  Next
+                </Button>
+              </div>
             </Route>
             <Route exact path="/">
               <h1>Home Page TBD...</h1>
