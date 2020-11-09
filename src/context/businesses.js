@@ -7,7 +7,7 @@ export const businesses = [
     location: "Sacramento",
     startTime: [8, 0],
     endTime: [20, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "",
     price: 450.0,
     daysOpen: {
@@ -28,8 +28,8 @@ export const businesses = [
     location: "Santa Cruz",
     startTime: [5, 0],
     endTime: [10, 0],
-    photo: "",
-    description: "",
+    photo: "/images/smallBusiness.jpg",
+    description: "boo!",
     price: 500.0,
     daysOpen: {
       Sun: true,
@@ -49,8 +49,8 @@ export const businesses = [
     location: "Santa Cruz",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "",
-    description: "",
+    photo: "/images/smallBusiness.jpg",
+    description: ":)",
     price: 200.0,
     daysOpen: {
       Sun: true,
@@ -70,8 +70,8 @@ export const businesses = [
     location: "Santa Clara",
     startTime: [2, 0],
     endTime: [17, 0],
-    photo: "",
-    description: "",
+    photo: "/images/smallBusiness.jpg",
+    description: ":)!",
     price: 1000.0,
     daysOpen: {
       Sun: true,
@@ -91,8 +91,8 @@ export const businesses = [
     location: "Santa Clara",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "",
-    description: "#1 Chili",
+    photo: "/images/smallBusiness.jpg",
+    description: "#1 Chili!",
     price: 5.0,
     daysOpen: {
       Sun: true,
@@ -112,7 +112,7 @@ export const businesses = [
     location: "Sacramento",
     startTime: [11, 0],
     endTime: [17, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "#1 Tan Tan Ramen",
     price: 100.0,
     daysOpen: {
@@ -133,7 +133,7 @@ export const businesses = [
     location: "Santa Cruz",
     startTime: [8, 0],
     endTime: [23, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "I sell food",
     price: 100.0,
     daysOpen: {
@@ -154,7 +154,7 @@ export const businesses = [
     location: "Santa Clara",
     startTime: [10, 0],
     endTime: [18, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "I am so good at doing nails",
     price: 500.0,
     daysOpen: {
@@ -175,7 +175,7 @@ export const businesses = [
     location: "Sacramento",
     startTime: [10, 0],
     endTime: [20, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "Look like a clown",
     price: 100.0,
     daysOpen: {
@@ -196,7 +196,7 @@ export const businesses = [
     location: "Santa Cruz",
     startTime: [7, 0],
     endTime: [22, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "For men",
     price: 100.0,
     daysOpen: {
@@ -217,7 +217,7 @@ export const businesses = [
     location: "Santa Clara",
     startTime: [7, 0],
     endTime: [18, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "I am so good at shoes",
     price: 50.0,
     daysOpen: {
@@ -238,7 +238,7 @@ export const businesses = [
     location: "Sacramento",
     startTime: [10, 0],
     endTime: [20, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "Tank tops for everyone",
     price: 100.0,
     daysOpen: {
@@ -259,7 +259,7 @@ export const businesses = [
     location: "Santa Cruz",
     startTime: [7, 0],
     endTime: [22, 0],
-    photo: "",
+    photo: "/images/smallBusiness.jpg",
     description: "For people who love jeans",
     price: 100.0,
     daysOpen: {

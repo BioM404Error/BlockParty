@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import Image from "react-bootstrap/Image";
 
 export default function OptionInformationModal({
   onHide,
@@ -10,7 +11,7 @@ export default function OptionInformationModal({
     <Modal
       show={show}
       onHide={onHide}
-      size="lg"
+      size="sm"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -20,6 +21,7 @@ export default function OptionInformationModal({
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <Image src={selectedOption.photo} fluid />
         <h4>{selectedOption.subtype}</h4>
         <h6>Price: ${selectedOption.price}</h6>
         <p>{selectedOption.description}</p>
