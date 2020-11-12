@@ -31,6 +31,10 @@ export default function Cart(props) {
               </div>
             </ListGroup.Item>
           ))}
+          <div>
+            <strong>Total: </strong>{" "}
+            {context.cart.reduce((acc, cur) => acc + cur.price, 0)}
+          </div>
         </ListGroup>
       </div>
     </React.Fragment>
