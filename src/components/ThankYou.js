@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
-function ThankYou() {
+export default function ThankYou() {
   return (
     <div>
       <h1>Thank You!</h1>
@@ -14,4 +14,3 @@ function ThankYou() {
     </div>
   );
 }
-export default ThankYou;
