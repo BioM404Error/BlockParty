@@ -1,25 +1,30 @@
 import React from "react";
-function clickMe() {
-  alert("Link to permit!");
-}
-function clickMe1() {
-  alert("Goes to specifications page");
-}
-function permit() {
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
+function Permit() {
   return (
     <div className="permit">
       <h1 class="main-title">APPLY FOR PERMIT</h1>
       <div>
-        <button onClick={clickMe}>
+        <button
+          onClick={() => {
+            alert("going to permit");
+          }}
+        >
           Click Here To Access Permit for X City
         </button>
       </div>
       <p>
         This location requires you to submit your permit X days before the event
       </p>
-      <button onClick={clickMe1}>Back</button>
-      <button onClick={clickMe}>Next</button>
+      <Button variant="secondary" as={Link} to="/specification">
+        Back
+      </Button>
+      <Button variant="primary" as={Link} to="/location">
+        Next
+      </Button>
     </div>
   );
 }
-export default permit;
+export default Permit;
