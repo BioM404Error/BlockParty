@@ -1,46 +1,30 @@
-import React, { Suspense, useRef } from "react";
+import React from "react";
 import { Vector3 } from "three";
-import { Canvas, useFrame, useThree } from "react-three-fiber";
-import { OrbitControls, softShadows } from "@react-three/drei";
+import { Canvas } from "react-three-fiber";
+import { OrbitControls, Stars } from "@react-three/drei";
 import CubeArray from "./CubeArray";
-import styled from "@emotion/styled";
-
-softShadows({
-  frustrum: 3.75, // Frustrum width (default: 3.75)
-  size: 0.005, // World size (default: 0.005)
-  near: 9.5, // Near plane (default: 9.5)
-  samples: 17, // Samples (default: 17)
-  rings: 11, // Rings (default: 11)
-});
-
-const CanvasSpace = styled.div`
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: block;
-`
+import "./styles/Canvas.css";
 
 const Landing = () => {
-  const sunRef = useRef();
   return (
-    <CanvasSpace>
+    <>
       <Canvas
         gl={{
           alpha: false,
         }}
         camera={{
           position: new Vector3(0, 0, 2),
+          fov: 60
         }}
         shadowMap
         colorManagement
       >
         {/*<OrbitControls />*/}
+        <Stars />
         <ambientLight intensity={0.1} />
         <pointLight
           position={[0, 2, -0.5]}
           intensity={0.7}
-          ref={sunRef}
           castShadow
         />
         <pointLight
@@ -55,15 +39,15 @@ const Landing = () => {
           receiveShadow
         >
           <planeBufferGeometry attach="geometry" args={[10, 10, 15]} />
-          <meshStandardMaterial attach="material" color="#AAAAAA" />
+          <meshStandardMaterial attach="material" color="lightgrey" />
         </mesh>
-        <group position={[-2.5, -1.5, 0]}>
+        <group position={[-7, -1.5, 0]}>
           <mesh castShadow receiveShadow>
-            {CubeArray(7, -2.5, 2.5, 1)}
+            {CubeArray(15, -7, 7, 1)}
           </mesh>
         </group>
       </Canvas>
-    </CanvasSpace>
+    </>
   )
 }
 

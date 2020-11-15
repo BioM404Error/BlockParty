@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import LandingCube from "./LandingCube";
 
 const COLORS = [
@@ -16,9 +16,9 @@ const CubeArray = (count, start, end, offset) => {
     const color = COLORS[Math.floor(Math.random()*COLORS.length)];
     let posX;
     let posY;
-    let rotDir = Math.floor(Math.random()*4);
+    let rotDir = Math.floor(Math.random()*2);
     if (i%2) {
-      posX = Math.floor(Math.random()*(range/2)*100)/100;
+      posX = Math.floor(Math.random()*(range/2)*100)/100 + range/20;
     } else {
       posX = Math.floor(Math.random()*(range/2)*100)/100 + range/2;
     }
