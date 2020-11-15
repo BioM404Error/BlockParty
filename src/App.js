@@ -61,7 +61,6 @@ function App() {
             </Route>
             <Route exact path="/location">
               <div>
-                <Locations />
                 <Button variant="secondary" as={Link} to="/permit">
                   Back
                 </Button>
@@ -69,6 +68,7 @@ function App() {
                   Next
                 </Button>
               </div>
+              <Locations />
             </Route>
             <Route exact path="/">
               <h1>Home Page TBD...</h1>
