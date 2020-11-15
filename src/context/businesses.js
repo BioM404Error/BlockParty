@@ -749,7 +749,7 @@ Traveling Makeup Artist within the Bay Area for all occasions. `,
     location: "Santa Clara",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "/images/SantaClara/MagickalEntertainment.png",
+    photo: "/images/SantaClara/MagickalEntertaiment.png",
     description: `	
     For kids, teens and adults! We offer balloon twisting, face painting, temporary tattoos, glitter tattoos, henna, character/walk-around, and pirate party services. We have over 30 years of entertainment experience, and we love making people smile!
     `,
@@ -818,7 +818,7 @@ Traveling Makeup Artist within the Bay Area for all occasions. `,
     location: "Santa Clara",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "/images/SantaClara/ANewDay&TimeEntertainment.png",
+    photo: "/images/SantaClara/ANewDayAndTimeEntertainment.png",
     description: `	
     A New Day And Time Entertainment is here to provide quality music and services for your special occasions.Our music collection has a wide variety which includes hip hop, R&B, old school funk, disco, latin, classic rock, 80s new wave, reggae/dancehall, blues and jazz. We love taking special requests and creating long lasting memories! Let us take your event to the next level!				
     `,
