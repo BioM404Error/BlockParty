@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../context/context";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function Permit() {
+  const context = useContext(Context);
+
   return (
     <div className="permit">
       <h1 class="main-title">APPLY FOR PERMIT</h1>
