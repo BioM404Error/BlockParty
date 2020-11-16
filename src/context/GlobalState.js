@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import Context from "./context";
 import { businesses } from "./businesses";
+import { permits } from "./permits";
 import {
   shopReducer,
   ADD_PRODUCT,
@@ -17,6 +18,7 @@ import {
 
 const GlobalState = (props) => {
   const products = businesses;
+  const permitUrls = permits;
 
   const [partyState, dispatch] = useReducer(shopReducer, {
     cart: [],
@@ -80,6 +82,7 @@ const GlobalState = (props) => {
         startTime: partyState.startTime,
         capacity: partyState.budget,
         products: products,
+        permitUrls: permitUrls,
         cart: partyState.cart,
         clearCart: clearCart,
         changeDate: changeDate,
