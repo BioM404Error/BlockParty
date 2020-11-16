@@ -169,7 +169,7 @@ export default function SpecificationPage(props) {
                   defaultValue={city}
                 >
                   <option>Choose...</option>
-                  <option>Sacramento</option>
+                  <option>Berkeley</option>
                   <option>Santa Cruz</option>
                   <option>Santa Clara</option>
                 </Form.Control>
