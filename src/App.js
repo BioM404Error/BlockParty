@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Reciept from "./components/RecieptPage";
 import Payment from "./components/PaymentPage";
-import Landing from "./components/Landing"
+import Landing from "./components/Landing/index"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 

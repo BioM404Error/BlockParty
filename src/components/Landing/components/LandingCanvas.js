@@ -3,9 +3,9 @@ import { Vector3 } from "three";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import CubeArray from "./CubeArray";
-import "./styles/Canvas.css";
+import "../styles/Canvas.css";
 
-const Landing = () => {
+const LandingCanvas = () => {
   return (
     <>
       <Canvas
@@ -21,7 +21,7 @@ const Landing = () => {
       >
         {/*<OrbitControls />*/}
         <Stars />
-        <ambientLight intensity={0.1} />
+        <ambientLight intensity={0.25} />
         <pointLight
           position={[0, 2, -0.5]}
           intensity={0.7}
@@ -51,4 +51,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default LandingCanvas
