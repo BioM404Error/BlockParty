@@ -5,7 +5,6 @@ import Overlay from "./components/Overlay"
 const index = () => {
   return (
     <>
-      {/*<Overlay />*/}
       <LandingCanvas />
       <Overlay consumer={"/specification"} business={"/permit"}/>
     </>
