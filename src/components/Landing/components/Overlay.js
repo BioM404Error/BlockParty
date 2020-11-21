@@ -7,7 +7,7 @@ const Content = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const Title = styled.div`
   position: relative;
@@ -16,7 +16,7 @@ const Title = styled.div`
   font-size: clamp(3rem, 7vw, 8rem);
   text-align: center;
   color: white;
-`
+`;
 
 const Buttons = styled.div`
   width: max(250px, 40%);
@@ -27,7 +27,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 
 const Button = styled.a`
   width: 40%;
@@ -47,7 +47,7 @@ const Button = styled.a`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Overlay = (props) => {
   const { consumer, business } = props;
@@ -57,19 +57,23 @@ const Overlay = (props) => {
       <Buttons>
         <Button
           style={{
-            background: "linear-gradient(150deg, yellow, red)"
+            background: "linear-gradient(150deg, yellow, red)",
           }}
           href={consumer}
-        >Consumer</Button>
+        >
+          Consumer
+        </Button>
         <Button
           style={{
-            background: "linear-gradient(150deg, green, blue)"
+            background: "linear-gradient(150deg, green, blue)",
           }}
           href={business}
-        >Business</Button>
+        >
+          Business
+        </Button>
       </Buttons>
     </Content>
-  )
-}
+  );
+};
 
-export default Overlay
+export default Overlay;

@@ -1,0 +1,14 @@
+.main-title {
+  font-size: 100px;
+  color: black;
+  position: relative;
+  font-family: Impact;
+}
+.boxed {
+  border-radius: 100px;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 25px;
+}
+
+/*css for the next and back buttons*/

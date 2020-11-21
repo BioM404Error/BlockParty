@@ -17,29 +17,59 @@ export default function Payment(props) {
 
   return (
     <div>
+      <h1
+        style={{
+          color: "white",
+          backgroundColor: "black",
+          fontSize: "100px",
+          fontFamily: "impact",
+        }}
+      >
+        {" "}
+        Payment
+      </h1>
+
       <Row>
         <Col style={{ justifyContent: "center" }}>
           <Row
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "30px",
+              marginTop: "50px",
             }}
           >
-            <Button variant="secondary" onClick={handleShow}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="secondary"
+              onClick={handleShow}
+            >
               {" "}
               PayPal
             </Button>
           </Row>
 
-          <Row style={{ justifyContent: "center", marginTop: "30px" }}>
-            <Button variant="secondary" onClick={handleShow}>
+          <Row style={{ justifyContent: "center", marginTop: "50px" }}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="secondary"
+              onClick={handleShow}
+            >
               {" "}
               PayPal Credit
             </Button>
           </Row>
-          <Row style={{ justifyContent: "center", marginTop: "30px" }}>
-            <Button variant="secondary" onClick={handleShow}>
+          <Row style={{ justifyContent: "center", marginTop: "50px" }}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="secondary"
+              onClick={handleShow}
+            >
               {" "}
               Venmo
             </Button>
@@ -48,10 +78,17 @@ export default function Payment(props) {
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "30px",
+              marginTop: "100px",
             }}
           >
-            <Button variant="primary" as={Link} to="/reciept">
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="primary"
+              as={Link}
+              to="/reciept"
+            >
               {" "}
               Submit
             </Button>

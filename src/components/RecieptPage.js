@@ -8,7 +8,14 @@ import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useHistory } from "react-router-dom";
+import styled from "@emotion/styled";
 
+const Buttons = styled.div`
+  height: 125px;
+  width: 100px;
+  margin: 10vh auto 0 auto;
+  display: flex;
+`;
 
 export default function Reciept(props) {
   const context = useContext(Context);
@@ -17,7 +24,7 @@ export default function Reciept(props) {
   const [show, setShow] = useState(false);
   const history = useHistory();
   const [validated, setValidated] = useState(false);
-  
+
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     setValidated(true);
@@ -27,7 +34,6 @@ export default function Reciept(props) {
     } else {
       history.push("/thankyou");
     }
-
   };
 
   const handleClose = () => {
@@ -41,7 +47,17 @@ export default function Reciept(props) {
 
   return (
     <div>
-      <h1> Reciept</h1>
+      <h1
+        style={{
+          color: "white",
+          backgroundColor: "black",
+          fontSize: "100px",
+          fontFamily: "impact",
+        }}
+      >
+        {" "}
+        Reciept
+      </h1>
       <Row style={{ display: "flex", justifyContent: "center" }}>
         <Card>
           <Card.Body>
@@ -58,26 +74,34 @@ export default function Reciept(props) {
               <Col>{serviceFee}</Col>
             </Row>
             <Row>
-              $
+              Total $
               {context.cart.reduce((acc, cur) => acc + cur.price, 0) +
                 serviceFee}
             </Row>
           </Card.Body>
         </Card>
       </Row>
-      <Row>
-        <Col>
-          <h2>
-            Thank you for Throwing a Block Party and Supporting Small
-            Businesses!
-          </h2>
-        </Col>
-        <Col>
+
+      <Col>
+        <Buttons>
           <Button variant="primary" onClick={handleTextEmail}>
             Send Reciept
           </Button>
-        </Col>
-      </Row>
+        </Buttons>
+      </Col>
+      <div style={{}}>
+        <p
+          style={{
+            color: "black",
+            textAlign: "center",
+            justifyContent: "center",
+            paddingTop: "100px",
+          }}
+        >
+          Thank you for Throwing a Block Party and Supporting Small Businesses!
+        </p>
+      </div>
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Enter Email</Modal.Title>
@@ -87,13 +111,14 @@ export default function Reciept(props) {
             <Form.Group controlId="formEmail">
               <Form.Label>Email address</Form.Label>
               <InputGroup>
-              <Form.Control
-                required
-                type="email"
-                placeholder="jane.doe@organization.com" />
-              <Form.Control.Feedback type="invalid">
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="jane.doe@organization.com"
+                />
+                <Form.Control.Feedback type="invalid">
                   Please choose a valid email.
-              </Form.Control.Feedback>
+                </Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
             <Form.Group controlId="formPhoneNumber">
@@ -105,13 +130,13 @@ export default function Reciept(props) {
                 placeholder="Enter Phone Number ###-###-###"
               />
               <Form.Control.Feedback type="invalid">
-               Please insert a valid phone number.
+                Please insert a valid phone number.
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Row>
-            <Button variant="primary" type="submit" >
-              Send
-          </Button>
+              <Button variant="primary" type="submit">
+                Send
+              </Button>
             </Form.Row>
           </Form>
         </Modal.Body>
@@ -119,4 +144,3 @@ export default function Reciept(props) {
     </div>
   );
 }
-

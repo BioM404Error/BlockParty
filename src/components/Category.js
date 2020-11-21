@@ -45,21 +45,33 @@ export default function Category(props) {
     <React.Fragment>
       <div
         style={{
-          margin: "1rem",
+          margin: "2rem",
           display: "flex",
           justifyContent: "space-between",
         }}
       >
-        <h1>{props.type}</h1>
-        <Button variant="primary" onClick={handleCartShow}>
+        <h1
+          style={{
+            fontFamily: "Impact",
+            color: "black",
+            fontSize: "100px",
+          }}
+        >
+          {props.type}
+        </h1>
+        <Button
+          style={{ borderRadius: "50%", height: "103px" }}
+          variant="primary"
+          onClick={handleCartShow}
+        >
           View <FontAwesomeIcon icon={faShoppingCart} /> ({context.cart.length})
         </Button>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <RemainingBudget />
       </div>
-      <Card style={{ margin: "2rem" }}>
-        <ListGroup style={{ overflow: "auto", height: "10rem" }}>
+      <Card style={{ height: "25rem", margin: "3rem" }}>
+        <ListGroup style={{ overflow: "auto", height: "90rem" }}>
           {context.products
             .filter(
               (option) =>
