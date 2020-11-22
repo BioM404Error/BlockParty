@@ -268,7 +268,7 @@ export const businesses = [
     location: "Berkeley",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "/images/Berkeley/suisSuisFrenchCaribbeanCuisin.png",
+    photo: "/images/Berkeley/suisSuisFrenchCaribbeanCuisine.png",
     description: "Suis Suis Caribbean Cuisine is an Afro-Caribbean Culinary Fusion which brings the uniquely cultivated recipes and flavors from across the Caribbean and African Diaspora to your table in minutes.",
     price: 2000,
     daysOpen: {
@@ -356,7 +356,7 @@ export const businesses = [
     location: "Berkeley",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "/images/Berkeley/bayAreaDjsCa",
+    photo: "/images/Berkeley/bayAreaDjsCa.jpeg",
     description: "We provide the right music for your timeless moments.Bay Area Djs CA. is a mobile Dj company. We provide music for all types of events and occasions. Since the mid 1990s, we have hosted a variety of events in and out of the Bay area, as far as Denver, Colorado. System comes equipped with MC services, lights, and fog machine. Our Djs are fluent in English and Spanish, which means we are able to make translations at any reception if necessary. Our Djs are professional and respectful at all events and always arrive one hour before start time of the reception. If needed, our references are available upon request. We have different packages available to fit your event.",
     price: 875,
     daysOpen: {
