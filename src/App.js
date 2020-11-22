@@ -12,10 +12,10 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Reciept from "./components/RecieptPage";
 import Payment from "./components/PaymentPage";
-import Landing from "./components/Landing";
-import Locations from "./components/Locations";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Locations from "./components/Locations";
+import Landing from "./components/Landing/index"
+
 
 function App() {
   return (
@@ -71,7 +71,7 @@ function App() {
               <Locations />
             </Route>
             <Route exact path="/">
-              <h1>Home Page TBD...</h1>
+              <Landing />
             </Route>
           </Switch>
         </Router>
