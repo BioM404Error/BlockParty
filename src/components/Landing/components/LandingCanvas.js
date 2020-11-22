@@ -1,7 +1,7 @@
 import React from "react";
 import { Vector3 } from "three";
 import { Canvas } from "react-three-fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
+import { Stars } from "@react-three/drei";
 import CubeArray from "./CubeArray";
 import "../styles/Canvas.css";
 
@@ -19,7 +19,6 @@ const LandingCanvas = () => {
         shadowMap
         colorManagement
       >
-        {/*<OrbitControls />*/}
         <Stars />
         <ambientLight intensity={0.25} />
         <pointLight
