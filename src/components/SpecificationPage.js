@@ -15,12 +15,6 @@ const CardBody = styled.div`
   font-family: Helvetica;
 `;
 
-const Buttons = styled.div`
-  height: 125px;
-  width: 100px;
-  margin: 10vh auto 0 auto;
-`;
-
 export default function SpecificationPage(props) {
   const context = useContext(Context);
 
@@ -105,13 +99,23 @@ export default function SpecificationPage(props) {
   };
 
   return (
-    <body style={{ backgroundColor: "white" }}>
+    <body className="specIm">
       <div
         style={{
           backgroundColor: "white",
+          paddingBottom: "10px",
         }}
       >
-        <h1 className="main-title">WHAT KIND OF BLOCK PARTY?</h1>
+        <h1
+          style={{
+            fontSize: "20px",
+            paddingLeft: "20px",
+          }}
+        >
+          {" "}
+          On The Block{" "}
+        </h1>
+        <h2 className="main-title">WHAT KIND OF BLOCK PARTY?</h2>
         <Form>
           <CardBody>
             <Card
@@ -120,7 +124,7 @@ export default function SpecificationPage(props) {
                 boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
                 marginLeft: "5rem",
                 marginRight: "5rem",
-                marginTop: "5rem",
+                marginTop: "3rem",
                 borderColor: "white",
               }}
             >
@@ -215,27 +219,28 @@ export default function SpecificationPage(props) {
               </Card.Body>
             </Card>
           </CardBody>
-          <Buttons>
-            <Button
-              className="buttonB"
-              style={{
-                fontSize: "25px",
-                marginRight: "25px",
-                background: "white",
-                color: "black",
-                borderColor: "black",
-              }}
-            >
-              Back
-            </Button>
-            <Button
-              className="buttonN"
-              style={{ fontSize: "25px" }}
-              onClick={() => handleNext()}
-            >
-              Next
-            </Button>
-          </Buttons>
+
+          <Button
+            className="buttonB"
+            style={{
+              fontSize: "25px",
+              marginRight: "25px",
+              background: "white",
+              color: "black",
+              borderColor: "black",
+            }}
+          >
+            Back
+          </Button>
+          <Button
+            className="buttonN"
+            style={{
+              fontSize: "25px",
+            }}
+            onClick={() => handleNext()}
+          >
+            Next
+          </Button>
         </Form>
 
         <Modal show={show} onHide={handleClose}>

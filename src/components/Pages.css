@@ -1,8 +1,8 @@
 .main-title {
-  font-size: 100px;
-  color: black;
-  position: relative;
+  font-size: 75px;
+  color: white;
   font-family: Impact;
+  background-color: black;
 }
 .boxed {
   border-radius: 100px;
@@ -12,3 +12,29 @@
 }
 
 /*css for the next and back buttons*/
+.buttonN {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.buttonB {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.tyImage {
+  background-image: url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
+}
+.specIm {
+  background-image: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+}
+/*permit page*/
+.permImg {
+  background-image: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+}
+
+.permit {
+  background-color: white;
+}

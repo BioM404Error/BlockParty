@@ -30,11 +30,12 @@ const Buttons = styled.div`
 `;
 
 const Button = styled.a`
-  width: 40%;
-  height: 100%;
+  width: 35%;
+  height: 250%;
   border: none;
   color: white;
   border-radius: 5px;
+  text-align: center;
   :focus {
     outline: none;
   }
@@ -61,7 +62,7 @@ const Overlay = (props) => {
           }}
           href={consumer}
         >
-          Consumer
+          I'm A Small Business owner
         </Button>
         <Button
           style={{
@@ -69,7 +70,7 @@ const Overlay = (props) => {
           }}
           href={business}
         >
-          Business
+          I Want To Throw A Block Party!
         </Button>
       </Buttons>
     </Content>

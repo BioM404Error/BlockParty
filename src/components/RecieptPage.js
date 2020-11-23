@@ -56,7 +56,7 @@ export default function Reciept(props) {
         }}
       >
         {" "}
-        Reciept
+        CONGRATS!
       </h1>
       <Row style={{ display: "flex", justifyContent: "center" }}>
         <Card>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 const Buttons = styled.div`
-  height: 125px;
+  height: 50px;
   width: 100px;
   margin: 10vh auto 0 auto;
   display: flex;
@@ -16,7 +16,7 @@ const Content = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 89%;
   text-align: center;
 `;
 
@@ -30,11 +30,11 @@ export default function SelectionPage() {
       <div>
         <h1
           style={{
-            fontSize: "100px",
+            fontSize: "75px",
             fontFamily: "Impact",
           }}
         >
-          Selections{" "}
+          SELECTIONS{" "}
         </h1>
         <Content>
           <Card border="light">
@@ -42,7 +42,7 @@ export default function SelectionPage() {
               <Button
                 style={{
                   width: "300px",
-                  height: "100px",
+                  height: "75px",
                   fontSize: "43px",
                   fontFamily: "Impact",
                   background: "black",
@@ -60,8 +60,8 @@ export default function SelectionPage() {
               <Button
                 style={{
                   width: "300px",
-                  height: "100px",
-                  fontSize: "55px",
+                  height: "75px",
+                  fontSize: "45px",
                   fontFamily: "Impact",
                 }}
                 as={Link}
@@ -77,9 +77,8 @@ export default function SelectionPage() {
               <Button
                 style={{
                   width: "300px",
-                  height: "100px",
-                  fontSize: "28px",
-                  fontSize: "55px",
+                  height: "75px",
+                  fontSize: "45px",
                   fontFamily: "Impact",
                 }}
                 as={Link}
@@ -95,9 +94,8 @@ export default function SelectionPage() {
               <Button
                 style={{
                   width: "300px",
-                  height: "100px",
-                  fontSize: "28px",
-                  fontSize: "55px",
+                  height: "75px",
+                  fontSize: "45px",
                   fontFamily: "Impact",
                 }}
                 as={Link}
@@ -107,23 +105,26 @@ export default function SelectionPage() {
               </Button>
             </Card.Body>
           </Card>
+
+          <Button
+            className="buttonB"
+            style={{
+              fontSize: "25px",
+              marginRight: "25px",
+              background: "white",
+              color: "black",
+              borderColor: "black",
+            }}
+            as={Link}
+            to="/location"
+          >
+            Back
+          </Button>
           <Buttons>
             <Button
               style={{
                 fontSize: "25px",
-                marginRight: "25px",
-                background: "white",
-                color: "black",
-                borderColor: "black",
-              }}
-              as={Link}
-              to="/location"
-            >
-              Back
-            </Button>
-            <Button
-              style={{
-                fontSize: "25px",
+                textAlign: "center",
               }}
               variant="primary"
               as={Link}

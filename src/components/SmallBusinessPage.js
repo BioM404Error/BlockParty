@@ -20,9 +20,15 @@ export default function SmallBusinessPage(props) {
     <div>
       <Card>
         <Card.Body>
-          <h1>Benefits of Joining Us</h1>
+          <h1
+            style={{
+              fontSize: "100px",
+            }}
+          >
+            Benefits of Joining Us
+          </h1>
           <p>
-           Small Business's are the heart of every community. They go the extra
+            Small Business's are the heart of every community. They go the extra
             mile, and have always been there for their communities. On The Block
             wants to return the favor, and be there for them. When you join us,
             your small business will be filtered by what type of business you

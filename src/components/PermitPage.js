@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Context from "../context/context";
 import Button from "react-bootstrap/Button";
 import { Link, withRouter } from "react-router-dom";
@@ -52,55 +52,67 @@ const SmallButton = styled.div`
 
 function Permit() {
   const context = useContext(Context);
-  const permit = context.permitUrls.filter(
-    (permit) => permit.location === context.location
-  );
+
+  const permit = context.permitUrls[context.location];
+  console.log(context.location);
+  const background =
+    context.location !== "Choose..."
+      ? context.permitUrls[context.location].image
+      : "https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80";
+
+  const Body = styled.body`
+    background-image: url(${background});
+  `;
 
   return (
-    <div className="permit">
-      <h1 className="main-title">APPLY FOR PERMIT</h1>
-      <div>
-        <Buttons>
+    <Body>
+      <div className="permit">
+        <h1 className="main-title">APPLY FOR PERMIT</h1>
+        <div>
+          <Buttons>
+            <Button
+              style={accessPermit}
+              variant="info"
+              href={permit ? permit.url : "/specification"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click Here To Access Permit for {context.location}
+            </Button>
+          </Buttons>
+        </div>
+        <p style={subText1}>
+          This location requires you to submit your permit{" "}
+          {permit ? permit.timeline : "(No data, please restart...)"} before the
+          event
+        </p>
+        <SmallButton>
           <Button
-            style={accessPermit}
-            variant="info"
-            href={permit[0] ? permit[0].url : "/specification"}
-            target="_blank"
-            rel="noopener noreferrer"
+            className="buttonB"
+            style={{
+              fontSize: "25px",
+              marginRight: "25px",
+              background: "white",
+              color: "black",
+              borderColor: "black",
+            }}
+            as={Link}
+            to="/specification"
           >
-            Click Here To Access Permit for {context.location} City
+            Back
           </Button>
-        </Buttons>
+          <Button
+            className="buttonN"
+            style={{ fontSize: "25px" }}
+            variant="primary"
+            as={Link}
+            to="/location"
+          >
+            Next
+          </Button>
+        </SmallButton>
       </div>
-      <p style={subText1}>
-        This location requires you to submit your permit
-        {permit[0] ? permit[0].timeline : "(No data, please restart...)"}
-        before the event
-      </p>
-      <SmallButton>
-        <Button
-          style={{
-            fontSize: "25px",
-            marginRight: "25px",
-            background: "white",
-            color: "black",
-            borderColor: "black",
-          }}
-          as={Link}
-          to="/specification"
-        >
-          Back
-        </Button>
-        <Button
-          style={{ fontSize: "25px" }}
-          variant="primary"
-          as={Link}
-          to="/location"
-        >
-          Next
-        </Button>
-      </SmallButton>
-    </div>
+    </Body>
   );
 }
 export default Permit;

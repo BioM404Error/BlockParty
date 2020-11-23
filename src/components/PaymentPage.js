@@ -26,7 +26,7 @@ export default function Payment(props) {
         }}
       >
         {" "}
-        Payment
+        ALMOST THERE...
       </h1>
 
       <Row>

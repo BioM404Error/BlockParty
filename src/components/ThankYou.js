@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import styled from "@emotion/styled";
 
 const Buttons = styled.div`
-  height: 125px;
+  height: 55px;
   width: 100px;
   margin: 10vh auto 0 auto;
   display: flex;
@@ -12,7 +12,7 @@ const Buttons = styled.div`
 
 export default function ThankYou() {
   return (
-    <body style={{ background: "./images/pageImages/permitPage.png" }}>
+    <body className="tyImage">
       <div
         style={{
           color: "black",
@@ -48,7 +48,11 @@ export default function ThankYou() {
           See You On The Block!
         </h1>
         <Buttons>
-          <Button variant="primary" as={Link} to="/">
+          <Button
+            style={{ background: "linear-gradient(150deg, green, blue)" }}
+            as={Link}
+            to="/"
+          >
             Return to Home
           </Button>
         </Buttons>
