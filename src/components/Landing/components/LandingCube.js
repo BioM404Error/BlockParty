@@ -31,6 +31,9 @@ const LandingCube = (props) => {
         case 1:
           box.current.rotation.y = -clock.getElapsedTime() / 2.5;
           break;
+        default:
+          box.current.rotation.y = clock.getElapsedTime() / 2.5;
+          break;
       }
       if (box.current.position.y < -0.575) {
         box.current.position.y = 3.75;
