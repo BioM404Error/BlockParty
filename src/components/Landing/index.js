@@ -6,7 +6,7 @@ const index = () => {
   return (
     <>
       <LandingCanvas />
-      <Overlay consumer={"/specification"} business={"/permit"}/>
+      <Overlay consumer={"/specification"} business={"/smallbusiness/"}/>
     </>
   )
 }
