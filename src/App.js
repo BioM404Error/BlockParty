@@ -35,6 +35,7 @@ function App() {
               <ThanksSmallBusiness />
             </Route>
             <Route exact path="/smallbusiness">
+              <BasicNavbar/>
               <SmallBusinessPage />
             </Route>
             <Route exact path="/selections">
