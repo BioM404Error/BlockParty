@@ -8,6 +8,9 @@ import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { useHistory } from "react-router-dom";
 import Context from "../context/context";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 export default function SpecificationPage(props) {
   const context = useContext(Context);
@@ -94,6 +97,36 @@ export default function SpecificationPage(props) {
 
   return (
     <div>
+
+      <div>
+        <Navbar bg="primary" variant="dark" >
+            <Navbar.Brand href="/">
+                <img
+                    alt=""
+                    src="/images/logo2-1.png"
+                    width="40"
+                    className="d-inline-block align-top"
+                />{' '}
+                On The Block
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="consumer-navbar-nav" />
+            <Navbar.Collapse id="consumer-navbar-nav">
+                <Nav className="mr-auto">
+                    <Nav.Link href="/specification">Specifications</Nav.Link>
+                    <Nav.Link href="/permit" disabled>Permit</Nav.Link>
+                    <Nav.Link href="/location" disabled>Locations</Nav.Link>
+                        <NavDropdown title="Selections" id="consumer-nav-dropdown" disabled>
+                        <NavDropdown.Item href="/selections">Selections</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/selections/Entertainment">Entertainment</NavDropdown.Item>
+                        <NavDropdown.Item href="/selections/Food">Food</NavDropdown.Item>
+                        <NavDropdown.Item href="/selections/Clothing">Clothing</NavDropdown.Item>
+                        <NavDropdown.Item href="/selections/Cosmetics">Clothing</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+      </div>
       <div>
         <h1>WHAT KIND OF BLOCK PARTY?</h1>
       </div>
