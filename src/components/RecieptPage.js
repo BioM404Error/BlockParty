@@ -112,14 +112,16 @@ export default function Reciept(props) {
             <Form.Group controlId="formEmail">
               <Form.Label>Email address</Form.Label>
               <InputGroup>
-                <Form.Control
-                  required
-                  type="email"
-                  placeholder="jane.doe@organization.com"
-                />
-                <Form.Control.Feedback type="invalid">
+
+              <Form.Control
+                required
+                type="email"
+                placeholder="jane.doe@organization.com" />
+              <Form.Control.Feedback type="invalid">
                   Please choose a valid email. Ex: jane.doe@organization.com
-                </Form.Control.Feedback>
+              </Form.Control.Feedback>
+
+
               </InputGroup>
             </Form.Group>
             <Form.Group controlId="formPhoneNumber">
@@ -131,7 +133,9 @@ export default function Reciept(props) {
                 placeholder="Enter Phone Number ###-###-###"
               />
               <Form.Control.Feedback type="invalid">
-                Please insert a valid phone number. Ex: 012-345-6789
+
+              Please insert a valid phone number. Ex: 012-345-6789
+
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Row>

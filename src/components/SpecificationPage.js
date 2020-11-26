@@ -11,6 +11,7 @@ import Context from "../context/context";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+
 import styled from "@emotion/styled";
 import "./Pages.css";
 
@@ -31,6 +32,7 @@ const Buttons = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `;
+
 
 export default function SpecificationPage(props) {
   const context = useContext(Context);

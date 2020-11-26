@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function SmallBusinessPage(props) {
   const [show, setShow] = useState(false);
@@ -14,7 +14,21 @@ export default function SmallBusinessPage(props) {
     setShow(false);
   };
 
+  const history = useHistory();
+  const [validated, setValidated] = useState(false);
+
   const handleShow = () => setShow(true);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    setValidated(true);
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      history.push("/smallbusiness/thankyou");
+    }
+  }
 
   return (
     <body
@@ -63,6 +77,7 @@ export default function SmallBusinessPage(props) {
             be seen by many different people and spread your business magic to a
             larger audience.
           </p>
+
         </div>
         <Card>
           <Card.Body>
