@@ -13,6 +13,20 @@ import "./Pages.css";
 
 const CardBody = styled.div`
   font-family: Helvetica;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+  background: "rgba(76, 175, 80, 0.4)";
+`;
+
+const Buttons = styled.div`
+  width: max(250px, 40%);
+  max-width: 700px;
+  height: 7%;
+  margin: 7vh auto 0 auto;
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export default function SpecificationPage(props) {
@@ -102,126 +116,112 @@ export default function SpecificationPage(props) {
     <body className="specIm">
       <div
         style={{
-          backgroundColor: "white",
-          paddingBottom: "10px",
+          paddingBottom: "20px",
         }}
       >
-        <h1
-          style={{
-            fontSize: "20px",
-            paddingLeft: "20px",
-          }}
-        >
-          {" "}
-          On The Block{" "}
-        </h1>
-        <h2 className="main-title">WHAT KIND OF BLOCK PARTY?</h2>
-        <Form>
-          <CardBody>
-            <Card
-              style={{
-                backgroundColor: "transparent",
-                boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-                marginLeft: "5rem",
-                marginRight: "5rem",
-                marginTop: "3rem",
-                borderColor: "white",
-              }}
-            >
-              <Card.Body>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Estimated Attendees
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      onChange={(e) => setCapacity(e.target.value)}
-                      type="number"
-                      defaultValue={capacity}
-                    />
-                  </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Desired Start Time
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      onChange={(e) => setStartTime(e.target.value)}
-                      type="time"
-                      name="startTime"
-                      placeholder="Start Time"
-                      defaultValue={startTime}
-                    />
-                  </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Desired End Time
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      onChange={(e) => setEndTime(e.target.value)}
-                      type="time"
-                      name="endTime"
-                      placeholder="End Time"
-                      defaultValue={endTime}
-                    />
-                  </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Select Date
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      type="date"
-                      name="date"
-                      placeholder="Party Date"
-                      onChange={(e) => setDate(e.target.value + "T00:00:00")}
-                      max="2050-12-31"
-                      defaultValue={date}
-                    />
-                  </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Desired City
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      as="select"
-                      className="mr-sm-2"
-                      id="inlineFormCustomSelect"
-                      custom
-                      onChange={(e) => setCity(e.target.value)}
-                      defaultValue={city}
-                    >
-                      <option>Choose...</option>
-                      <option>Berkeley</option>
-                      <option>Santa Cruz</option>
-                      <option>Santa Clara</option>
-                    </Form.Control>
-                  </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                  <Form.Label column sm="2">
-                    Your Budget
-                  </Form.Label>
-                  <Col sm="10">
-                    <Form.Control
-                      type="number"
-                      onChange={(e) => setBudget(e.target.value)}
-                      defaultValue={budget}
-                    />
-                  </Col>
-                </Form.Group>
-              </Card.Body>
-            </Card>
-          </CardBody>
-
+        <h2 className="main-title">GIVE US THE DEETS</h2>
+      </div>
+      <Form>
+        <div className="cardBody">
+          <Card
+            style={{
+              borderColor: "linear-gradient(150deg, yellow, red)",
+              borderRadius: "15px 50px 30px",
+            }}
+          >
+            <Card.Body>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Estimated Attendees
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    onChange={(e) => setCapacity(e.target.value)}
+                    type="number"
+                    defaultValue={capacity}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Desired Start Time
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    onChange={(e) => setStartTime(e.target.value)}
+                    type="time"
+                    name="startTime"
+                    placeholder="Start Time"
+                    defaultValue={startTime}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Desired End Time
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    onChange={(e) => setEndTime(e.target.value)}
+                    type="time"
+                    name="endTime"
+                    placeholder="End Time"
+                    defaultValue={endTime}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Select Date
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    type="date"
+                    name="date"
+                    placeholder="Party Date"
+                    onChange={(e) => setDate(e.target.value + "T00:00:00")}
+                    max="2050-12-31"
+                    defaultValue={date}
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Desired City
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    as="select"
+                    className="mr-sm-2"
+                    id="inlineFormCustomSelect"
+                    custom
+                    onChange={(e) => setCity(e.target.value)}
+                    defaultValue={city}
+                  >
+                    <option>Choose...</option>
+                    <option>Berkeley</option>
+                    <option>Santa Cruz</option>
+                    <option>Santa Clara</option>
+                  </Form.Control>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row}>
+                <Form.Label column sm="2">
+                  Your Budget
+                </Form.Label>
+                <Col sm="10">
+                  <Form.Control
+                    type="number"
+                    onChange={(e) => setBudget(e.target.value)}
+                    defaultValue={budget}
+                  />
+                </Col>
+              </Form.Group>
+            </Card.Body>
+          </Card>
+        </div>
+        <Buttons>
           <Button
-            className="buttonB"
             style={{
               fontSize: "25px",
               marginRight: "25px",
@@ -233,7 +233,6 @@ export default function SpecificationPage(props) {
             Back
           </Button>
           <Button
-            className="buttonN"
             style={{
               fontSize: "25px",
             }}
@@ -241,15 +240,15 @@ export default function SpecificationPage(props) {
           >
             Next
           </Button>
-        </Form>
+        </Buttons>
+      </Form>
 
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Warning!</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{warning}</Modal.Body>
-        </Modal>
-      </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Warning!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{warning}</Modal.Body>
+      </Modal>
     </body>
   );
 }

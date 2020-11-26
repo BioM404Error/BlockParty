@@ -16,36 +16,30 @@ const Content = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  height: 89%;
+  height: 85%;
   text-align: center;
 `;
 
 export default function SelectionPage() {
   return (
-    <body
-      style={{
-        background: "white",
-      }}
-    >
+    <body>
       <div>
-        <h1
-          style={{
-            fontSize: "75px",
-            fontFamily: "Impact",
-          }}
-        >
-          SELECTIONS{" "}
-        </h1>
+        <h1 className="main-title">SELECTIONS </h1>
+        <h2 className="disclaimer">
+          {" "}
+          *These are all local small business's from the area you chose!*
+        </h2>
         <Content>
           <Card border="light">
             <Card.Body style={{ justifyContent: "space-between" }}>
               <Button
                 style={{
-                  width: "300px",
+                  width: "400px",
                   height: "75px",
                   fontSize: "43px",
                   fontFamily: "Impact",
                   background: "black",
+                  boxShadow: "10px 10px 8px #888888",
                 }}
                 as={Link}
                 to="/selections/Entertainment"
@@ -59,10 +53,12 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "300px",
+                  width: "400px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
+                  background: "black",
+                  boxShadow: "10px 10px 8px #888888",
                 }}
                 as={Link}
                 to="/selections/Food"
@@ -76,10 +72,12 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "300px",
+                  width: "400px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
+                  background: "black",
+                  boxShadow: "10px 10px 8px #888888",
                 }}
                 as={Link}
                 to="/selections/Clothing"
@@ -93,10 +91,12 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "300px",
+                  width: "400px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
+                  background: "black",
+                  boxShadow: "10px 10px 8px #888888",
                 }}
                 as={Link}
                 to="/selections/Cosmetics"
@@ -125,8 +125,9 @@ export default function SelectionPage() {
               style={{
                 fontSize: "25px",
                 textAlign: "center",
+                background: "linear-gradient(150deg, green, blue)",
+                border: "white",
               }}
-              variant="primary"
               as={Link}
               to="/payment"
             >

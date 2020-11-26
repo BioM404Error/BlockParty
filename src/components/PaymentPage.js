@@ -17,17 +17,11 @@ export default function Payment(props) {
 
   return (
     <div>
-      <h1
-        style={{
-          color: "white",
-          backgroundColor: "black",
-          fontSize: "100px",
-          fontFamily: "impact",
-        }}
-      >
+      <h1 className="main-title"> GIVE US THE DOE </h1>
+      <h2 className="disclaimer" style={{ paddingBottom: "20px" }}>
         {" "}
-        ALMOST THERE...
-      </h1>
+        *All proceeds, besides service fee, go to the Small Business's*{" "}
+      </h2>
 
       <Row>
         <Col style={{ justifyContent: "center" }}>
@@ -42,7 +36,7 @@ export default function Payment(props) {
               style={{
                 width: "200px",
               }}
-              variant="secondary"
+              variant="primary"
               onClick={handleShow}
             >
               {" "}
@@ -55,7 +49,7 @@ export default function Payment(props) {
               style={{
                 width: "200px",
               }}
-              variant="secondary"
+              variant="primary"
               onClick={handleShow}
             >
               {" "}
@@ -67,7 +61,7 @@ export default function Payment(props) {
               style={{
                 width: "200px",
               }}
-              variant="secondary"
+              variant="primary"
               onClick={handleShow}
             >
               {" "}
@@ -84,19 +78,29 @@ export default function Payment(props) {
             <Button
               style={{
                 width: "200px",
+                background: "linear-gradient(150deg, yellow, red)",
+                color: "white",
+                fontSize: "25px",
               }}
-              variant="primary"
+              variant="light"
               as={Link}
               to="/reciept"
             >
               {" "}
-              Submit
+              SUBMIT
             </Button>
           </Row>
         </Col>
         <Col>
           <h1> Cart Total</h1>
-          <Card style={{ justifyContent: "center", marginRight: "30px" }}>
+          <Card
+            style={{
+              boxShadow: "10px 10px 8px #888888",
+              justifyContent: "center",
+              marginRight: "100px",
+              maxWidth: "400px",
+            }}
+          >
             <Card.Body>
               {context.cart.map((item) => (
                 <Row>
@@ -106,11 +110,11 @@ export default function Payment(props) {
               ))}
 
               <Row>
-                <Col>Service Fee</Col>
+                <Col style={{ fontWeight: "bold" }}>Service Fee</Col>
                 <Col>${serviceFee}</Col>
               </Row>
               <Row>
-                <Col>Total Cost</Col>
+                <Col style={{ fontWeight: "900" }}>TOTAL COST</Col>
                 <Col>
                   $
                   {context.cart.reduce((acc, cur) => acc + cur.price, 0) +

@@ -11,10 +11,11 @@ import { useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 
 const Buttons = styled.div`
-  height: 125px;
-  width: 100px;
+  height: 50px;
+  width: 150px;
   margin: 10vh auto 0 auto;
   display: flex;
+  justify-content: center;
 `;
 
 export default function Reciept(props) {
@@ -47,19 +48,12 @@ export default function Reciept(props) {
 
   return (
     <div>
-      <h1
-        style={{
-          color: "white",
-          backgroundColor: "black",
-          fontSize: "100px",
-          fontFamily: "impact",
-        }}
-      >
+      <h1 className="main-title" style={{ paddingBottom: "50px" }}>
         {" "}
-        CONGRATS!
+        PURCHASE COMPLETED!
       </h1>
       <Row style={{ display: "flex", justifyContent: "center" }}>
-        <Card>
+        <Card style={{ boxShadow: "10px 10px 8px #888888" }}>
           <Card.Body>
             {context.cart.map((item) => (
               <Row>
@@ -84,7 +78,14 @@ export default function Reciept(props) {
 
       <Col>
         <Buttons>
-          <Button variant="primary" onClick={handleTextEmail}>
+          <Button
+            style={{
+              color: "white",
+              background: "linear-gradient(150deg, green, blue)",
+            }}
+            variant="light"
+            onClick={handleTextEmail}
+          >
             Send Reciept
           </Button>
         </Buttons>

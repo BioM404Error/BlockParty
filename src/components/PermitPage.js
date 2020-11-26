@@ -10,6 +10,8 @@ const accessPermit = {
   fontSize: "30px",
   color: "black",
   backgroundColor: "white",
+  fontFamily: "Helvetica",
+  boxShadow: "10px 10px 8px #888888",
 };
 
 const subText1 = {
@@ -17,8 +19,7 @@ const subText1 = {
   color: "black",
   textAlign: "center",
   fontFamily: "Helvetica",
-  marginTop: "30px",
-  paddingBottom: "100px",
+  marginTop: "50px",
 };
 
 const Buttons = styled.div`
@@ -67,12 +68,12 @@ function Permit() {
   return (
     <Body>
       <div className="permit">
-        <h1 className="main-title">APPLY FOR PERMIT</h1>
+        <h1 className="main-title">APPLY FOR A PERMIT</h1>
         <div>
           <Buttons>
             <Button
               style={accessPermit}
-              variant="info"
+              variant="primary"
               href={permit ? permit.url : "/specification"}
               target="_blank"
               rel="noopener noreferrer"

@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import OptionInformationModal from "./OptionInformationModal";
 import RemainingBudget from "./RemainingBudget";
+import styled from "@emotion/styled";
 
 export default function Category(props) {
   const context = useContext(Context);
@@ -40,6 +41,14 @@ export default function Category(props) {
   const partyEndTime = context.endTime
     ? context.endTime.split(":").map((item) => parseInt(item))
     : [24, 0];
+
+  const Buttons = styled.div`
+    height: 50px;
+    width: 300px;
+    margin: 12vh auto 0 auto;
+    display: flex;
+    justify-content: center;
+  `;
 
   return (
     <React.Fragment>
@@ -105,9 +114,22 @@ export default function Category(props) {
             ))}
         </ListGroup>
       </Card>
-      <Button variant="light" as={Link} to="/selections">
-        Return to Selection
-      </Button>
+      <Buttons>
+        <Button
+          style={{
+            fontSize: "25px",
+            textAlign: "center",
+            background: "linear-gradient(150deg, green, blue)",
+            border: "white",
+            color: "white",
+          }}
+          variant="light"
+          as={Link}
+          to="/selections"
+        >
+          Return to Selection
+        </Button>
+      </Buttons>
 
       <Modal show={showCart} onHide={handleCartClose}>
         <Modal.Header closeButton>

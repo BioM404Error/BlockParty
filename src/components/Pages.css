@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
 .main-title {
-  font-size: 75px;
-  color: white;
-  font-family: Impact;
-  background-color: black;
+  font-size: 80px;
+  color: black;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 15px;
+  font-family: "Fjalla One", sans-serif;
 }
 .boxed {
   border-radius: 100px;
@@ -25,16 +29,53 @@
 }
 
 .tyImage {
-  background-image: url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.783),
+      rgba(160, 160, 160, 0.783)
+    ),
+    url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
 }
-.specIm {
-  background-image: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
-}
+
 /*permit page*/
-.permImg {
-  background-image: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
-}
 
 .permit {
   background-color: white;
+}
+
+/*specs page*/
+.cardBody {
+  background: rgba(255, 0, 0, 0.078);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 15px 50px 30px;
+}
+.disclaimer {
+  text-align: center;
+  font-size: 15px;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*thank you page*/
+.parting {
+  font-family: Helvetica;
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+.special {
+  font-family: Impact;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+/*thank you small business*/
+.bgTy {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.783),
+      rgba(160, 160, 160, 0.783)
+    ),
+    url("https://images.unsplash.com/photo-1562077790-5fab0c2e49eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2503&q=80");
 }

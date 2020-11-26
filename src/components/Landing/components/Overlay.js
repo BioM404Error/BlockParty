@@ -13,29 +13,29 @@ const Title = styled.div`
   position: relative;
   width: 60%;
   margin: 30vh auto 0 auto;
-  font-size: clamp(3rem, 7vw, 8rem);
+  font-size: clamp(6rem, 10vw, 11rem);
   text-align: center;
   color: white;
+  font-family: Impact;
 `;
 
 const Buttons = styled.div`
   width: max(250px, 40%);
-  max-width: 500px;
+  max-width: 700px;
   height: 7%;
   margin: 7vh auto 0 auto;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
 const Button = styled.a`
-  width: 35%;
-  height: 250%;
+  width: 40%;
+  height: 100%;
   border: none;
   color: white;
   border-radius: 5px;
-  text-align: center;
   :focus {
     outline: none;
   }
@@ -62,7 +62,7 @@ const Overlay = (props) => {
           }}
           href={consumer}
         >
-          I'm A Small Business owner
+          Throw A Block Party!
         </Button>
         <Button
           style={{
@@ -70,7 +70,7 @@ const Overlay = (props) => {
           }}
           href={business}
         >
-          I Want To Throw A Block Party!
+          Small Business Owner
         </Button>
       </Buttons>
     </Content>
