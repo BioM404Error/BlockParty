@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import OptionInformationModal from "./OptionInformationModal";
 import RemainingBudget from "./RemainingBudget";
+import styled from "@emotion/styled";
 
 export default function Category(props) {
   const context = useContext(Context);
@@ -41,25 +42,45 @@ export default function Category(props) {
     ? context.endTime.split(":").map((item) => parseInt(item))
     : [24, 0];
 
+  const Buttons = styled.div`
+    height: 50px;
+    width: 300px;
+    margin: 12vh auto 0 auto;
+    display: flex;
+    justify-content: center;
+  `;
+
   return (
     <React.Fragment>
       <div
         style={{
-          margin: "1rem",
+          margin: "2rem",
           display: "flex",
           justifyContent: "space-between",
         }}
       >
-        <h1>{props.type}</h1>
-        <Button variant="primary" onClick={handleCartShow}>
+        <h1
+          style={{
+            fontFamily: "Impact",
+            color: "black",
+            fontSize: "100px",
+          }}
+        >
+          {props.type}
+        </h1>
+        <Button
+          style={{ borderRadius: "50%", height: "103px" }}
+          variant="primary"
+          onClick={handleCartShow}
+        >
           View <FontAwesomeIcon icon={faShoppingCart} /> ({context.cart.length})
         </Button>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <RemainingBudget />
       </div>
-      <Card style={{ margin: "2rem" }}>
-        <ListGroup style={{ overflow: "auto", height: "10rem" }}>
+      <Card style={{ height: "25rem", margin: "3rem" }}>
+        <ListGroup style={{ overflow: "auto", height: "90rem" }}>
           {context.products
             .filter(
               (option) =>
@@ -93,9 +114,22 @@ export default function Category(props) {
             ))}
         </ListGroup>
       </Card>
-      <Button variant="light" as={Link} to="/selections">
-        Return to Selection
-      </Button>
+      <Buttons>
+        <Button
+          style={{
+            fontSize: "25px",
+            textAlign: "center",
+            background: "linear-gradient(150deg, green, blue)",
+            border: "white",
+            color: "white",
+          }}
+          variant="light"
+          as={Link}
+          to="/selections"
+        >
+          Return to Selection
+        </Button>
+      </Buttons>
 
       <Modal show={showCart} onHide={handleCartClose}>
         <Modal.Header closeButton>

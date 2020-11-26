@@ -7,27 +7,28 @@ const Content = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const Title = styled.div`
   position: relative;
   width: 60%;
   margin: 30vh auto 0 auto;
-  font-size: clamp(3rem, 7vw, 8rem);
+  font-size: clamp(6rem, 10vw, 11rem);
   text-align: center;
   color: white;
-`
+  font-family: Impact;
+`;
 
 const Buttons = styled.div`
   width: max(250px, 40%);
-  max-width: 500px;
+  max-width: 700px;
   height: 7%;
   margin: 7vh auto 0 auto;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 
 const Button = styled.a`
   width: 40%;
@@ -47,7 +48,7 @@ const Button = styled.a`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Overlay = (props) => {
   const { consumer, business } = props;
@@ -57,19 +58,23 @@ const Overlay = (props) => {
       <Buttons>
         <Button
           style={{
-            background: "linear-gradient(150deg, yellow, red)"
+            background: "linear-gradient(150deg, yellow, red)",
           }}
           href={consumer}
-        >Consumer</Button>
+        >
+          Throw A Block Party!
+        </Button>
         <Button
           style={{
-            background: "linear-gradient(150deg, green, blue)"
+            background: "linear-gradient(150deg, green, blue)",
           }}
           href={business}
-        >Business</Button>
+        >
+          Small Business Owner
+        </Button>
       </Buttons>
     </Content>
-  )
-}
+  );
+};
 
-export default Overlay
+export default Overlay;

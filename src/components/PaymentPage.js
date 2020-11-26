@@ -17,29 +17,53 @@ export default function Payment(props) {
 
   return (
     <div>
+      <h1 className="main-title"> GIVE US THE DOE </h1>
+      <h2 className="disclaimer" style={{ paddingBottom: "20px" }}>
+        {" "}
+        *All proceeds, besides service fee, go to the Small Business's*{" "}
+      </h2>
+
       <Row>
         <Col style={{ justifyContent: "center" }}>
           <Row
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "30px",
+              marginTop: "50px",
             }}
           >
-            <Button variant="secondary" onClick={handleShow}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="primary"
+              onClick={handleShow}
+            >
               {" "}
               PayPal
             </Button>
           </Row>
 
-          <Row style={{ justifyContent: "center", marginTop: "30px" }}>
-            <Button variant="secondary" onClick={handleShow}>
+          <Row style={{ justifyContent: "center", marginTop: "50px" }}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="primary"
+              onClick={handleShow}
+            >
               {" "}
               PayPal Credit
             </Button>
           </Row>
-          <Row style={{ justifyContent: "center", marginTop: "30px" }}>
-            <Button variant="secondary" onClick={handleShow}>
+          <Row style={{ justifyContent: "center", marginTop: "50px" }}>
+            <Button
+              style={{
+                width: "200px",
+              }}
+              variant="primary"
+              onClick={handleShow}
+            >
               {" "}
               Venmo
             </Button>
@@ -48,18 +72,35 @@ export default function Payment(props) {
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "30px",
+              marginTop: "100px",
             }}
           >
-            <Button variant="primary" as={Link} to="/reciept">
+            <Button
+              style={{
+                width: "200px",
+                background: "linear-gradient(150deg, yellow, red)",
+                color: "white",
+                fontSize: "25px",
+              }}
+              variant="light"
+              as={Link}
+              to="/reciept"
+            >
               {" "}
-              Submit
+              SUBMIT
             </Button>
           </Row>
         </Col>
         <Col>
           <h1> Cart Total</h1>
-          <Card style={{ justifyContent: "center", marginRight: "30px" }}>
+          <Card
+            style={{
+              boxShadow: "10px 10px 8px #888888",
+              justifyContent: "center",
+              marginRight: "100px",
+              maxWidth: "400px",
+            }}
+          >
             <Card.Body>
               {context.cart.map((item) => (
                 <Row>
@@ -69,11 +110,11 @@ export default function Payment(props) {
               ))}
 
               <Row>
-                <Col>Service Fee</Col>
+                <Col style={{ fontWeight: "bold" }}>Service Fee</Col>
                 <Col>${serviceFee}</Col>
               </Row>
               <Row>
-                <Col>Total Cost</Col>
+                <Col style={{ fontWeight: "900" }}>TOTAL COST</Col>
                 <Col>
                   $
                   {context.cart.reduce((acc, cur) => acc + cur.price, 0) +
