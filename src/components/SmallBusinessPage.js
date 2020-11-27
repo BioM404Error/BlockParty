@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { Link, useHistory } from "react-router-dom";
+import styled from "@emotion/styled";
 
 export default function SmallBusinessPage(props) {
   const [show, setShow] = useState(false);
@@ -28,7 +29,16 @@ export default function SmallBusinessPage(props) {
     } else {
       history.push("/smallbusiness/thankyou");
     }
-  }
+  };
+
+  const Buttons = styled.div`
+    width: max(250px, 40%);
+    max-width: 700px;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  `;
 
   return (
     <body
@@ -58,8 +68,9 @@ export default function SmallBusinessPage(props) {
             style={{
               margin: "4vh auto 0 auto",
               borderColor: "black",
-              textAlign: "center",
+              textAlign: "justify",
               width: "500px",
+              fontSize: "18px",
             }}
           >
             Small Business's are the heart of every community. They go the extra
@@ -72,17 +83,46 @@ export default function SmallBusinessPage(props) {
             have: Cosmetics, Entertinment, Food, or Clothing. When a user enters
             our site, they will be able to view your business, and decide if
             they want you at their Block Party. If your business is selected and
-            purchased, your bussiness will recieve payment for your services.
-            When you are at the users Block Party, you will have the chance to
-            be seen by many different people and spread your business magic to a
-            larger audience.
+            purchased, you will recieve payment for your services. When you are
+            at the users Block Party, you will have the chance to be seen by
+            many different people and spread your business magic to a larger
+            audience.
           </p>
-
         </div>
-        <Card>
+
+        <Card
+          style={{
+            borderColor: "transparent",
+          }}
+        >
           <Card.Body>
-            <Button variant="primary" onClick={handleShow}>
-              Join Us!
+            <Buttons>
+              <Button
+                style={{
+                  display: "block",
+                  margin: "0 auto",
+                  maxWidth: "200px",
+                  background: "linear-gradient(150deg, green, blue)",
+                  fontSize: "30px",
+                }}
+                variant="primary"
+                onClick={handleShow}
+              >
+                Join Us!
+              </Button>
+            </Buttons>
+            <Button
+              style={{
+                display: "block",
+                margin: "0 auto",
+                maxWidth: "150px",
+                marginBottom: "20px",
+              }}
+              variant="secondary"
+              as={Link}
+              to="/"
+            >
+              No Thanks
             </Button>
           </Card.Body>
         </Card>

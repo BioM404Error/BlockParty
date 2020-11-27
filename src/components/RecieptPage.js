@@ -10,14 +10,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 
-const Buttons = styled.div`
-  height: 50px;
-  width: 150px;
-  margin: 10vh auto 0 auto;
-  display: flex;
-  justify-content: center;
-`;
-
 export default function Reciept(props) {
   const context = useContext(Context);
   const serviceFee =
@@ -46,6 +38,14 @@ export default function Reciept(props) {
     handleShow();
   };
 
+  const Buttons = styled.div`
+    height: 50px;
+    width: 150px;
+    margin: 10vh auto 0 auto;
+    display: flex;
+    justify-content: center;
+  `;
+
   return (
     <div>
       <h1 className="main-title" style={{ paddingBottom: "50px" }}>
@@ -64,10 +64,10 @@ export default function Reciept(props) {
               </Row>
             ))}
             <Row>
-              <Col>Service Fee</Col>
+              <Col style={{ fontWeight: "bold" }}>Service Fee</Col>
               <Col>{serviceFee}</Col>
             </Row>
-            <Row>
+            <Row style={{ fontWeight: "900" }}>
               Total $
               {context.cart.reduce((acc, cur) => acc + cur.price, 0) +
                 serviceFee}
@@ -81,7 +81,7 @@ export default function Reciept(props) {
           <Button
             style={{
               color: "white",
-              background: "linear-gradient(150deg, green, blue)",
+              background: "linear-gradient(150deg, yellow, red)",
             }}
             variant="light"
             onClick={handleTextEmail}
@@ -112,16 +112,14 @@ export default function Reciept(props) {
             <Form.Group controlId="formEmail">
               <Form.Label>Email address</Form.Label>
               <InputGroup>
-
-              <Form.Control
-                required
-                type="email"
-                placeholder="jane.doe@organization.com" />
-              <Form.Control.Feedback type="invalid">
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="jane.doe@organization.com"
+                />
+                <Form.Control.Feedback type="invalid">
                   Please choose a valid email. Ex: jane.doe@organization.com
-              </Form.Control.Feedback>
-
-
+                </Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
             <Form.Group controlId="formPhoneNumber">
@@ -133,9 +131,7 @@ export default function Reciept(props) {
                 placeholder="Enter Phone Number ###-###-###"
               />
               <Form.Control.Feedback type="invalid">
-
-              Please insert a valid phone number. Ex: 012-345-6789
-
+                Please insert a valid phone number. Ex: 012-345-6789
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Row>

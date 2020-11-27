@@ -13,17 +13,10 @@ const Buttons = styled.div`
 export default function ThankYou() {
   return (
     <body className="tyImage">
-      <div
-        style={{
-          color: "black",
-          justifyContent: "center",
-        }}
-      >
+      <div>
         <h1
           className="main-title"
           style={{
-            color: "black",
-            textAlign: "center",
             paddingTop: "200px",
             fontSize: "100px",
             borderRadius: "0%",
@@ -34,14 +27,13 @@ export default function ThankYou() {
         <h1
           className="parting"
           style={{
-            textAlign: "center",
             paddingTop: "50px",
           }}
         >
           {" "}
           Our team is getting straight to work...
         </h1>
-        <h1 className="parting" style={{}}>
+        <h1 className="parting">
           {" "}
           See You <span className="special">On The Block!</span>
         </h1>

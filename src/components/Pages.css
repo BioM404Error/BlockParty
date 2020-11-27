@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
+/*multiple pages*/
+
 .main-title {
   font-size: 80px;
   color: black;
@@ -7,12 +9,20 @@
   text-align: center;
   border-radius: 15px;
   font-family: "Fjalla One", sans-serif;
+  padding-top: 20px;
 }
 .boxed {
   border-radius: 100px;
   padding-right: 55px;
   padding-left: 55px;
   padding-top: 25px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 15px;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*css for the next and back buttons*/
@@ -28,20 +38,6 @@
   bottom: 5px;
 }
 
-.tyImage {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.783),
-      rgba(160, 160, 160, 0.783)
-    ),
-    url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
-}
-
-/*permit page*/
-
-.permit {
-  background-color: white;
-}
-
 /*specs page*/
 .cardBody {
   background: rgba(255, 0, 0, 0.078);
@@ -51,14 +47,23 @@
   padding-bottom: 3%;
   border-radius: 15px 50px 30px;
 }
-.disclaimer {
-  text-align: center;
-  font-size: 15px;
-  background: white;
-  font-family: Arial, Helvetica, sans-serif;
+
+/*permit page*/
+
+.permit {
+  background-color: white;
 }
 
 /*thank you page*/
+
+.tyImage {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.783),
+      rgba(160, 160, 160, 0.783)
+    ),
+    url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
+}
+
 .parting {
   font-family: Helvetica;
   color: black;

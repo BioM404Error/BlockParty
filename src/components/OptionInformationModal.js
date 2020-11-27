@@ -24,7 +24,7 @@ export default function OptionInformationModal({
         <Image src={selectedOption.photo} fluid />
         <h4>{selectedOption.subtype}</h4>
         <h6>Price: ${selectedOption.price}</h6>
-        <p>{selectedOption.description}</p>
+        <p style={{ textAlign: "justify" }}>{selectedOption.description}</p>
         <p>
           Hours: {selectedOption.startTime[0]}:
           {selectedOption.startTime[1].toString().padEnd(2, 0)} to{" "}

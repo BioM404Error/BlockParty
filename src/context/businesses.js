@@ -269,7 +269,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/suisSuisFrenchCaribbeanCuisine.png",
-    description: "Suis Suis Caribbean Cuisine is an Afro-Caribbean Culinary Fusion which brings the uniquely cultivated recipes and flavors from across the Caribbean and African Diaspora to your table in minutes.",
+    description:
+      "Suis Suis Caribbean Cuisine is an Afro-Caribbean Culinary Fusion which brings the uniquely cultivated recipes and flavors from across the Caribbean and African Diaspora to your table in minutes.",
     price: 2000,
     daysOpen: {
       Sun: true,
@@ -291,7 +292,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/sparkleTatts.jpeg",
-    description: "Pro hand-crafted/CUSTOMIZED glitter & Crystal Body Tattoos. Festive & fun!!! Consider all the occasions that would be more FESTIVE!....Birthday, school fund raisers, anniversary, graduation, music festival, fairs and much more. I can create custom designs! I provide affordable safe, non-toxic (glueless!) sparkle tattoos & gems, Face, Cheek art, Sparkle! Fun, unique and contemporary way to express yourself. Appeals to all! We offer a great selection to choose, children are excited to get SparkleTatts with their favorite Superheroes. I also create paper signs, banners, & grocery style paper. Insured A+",
+    description:
+      "Pro hand-crafted/CUSTOMIZED glitter & Crystal Body Tattoos. Festive & fun!!! Consider all the occasions that would be more FESTIVE!....Birthday, school fund raisers, anniversary, graduation, music festival, fairs and much more. I can create custom designs! I provide affordable safe, non-toxic (glueless!) sparkle tattoos & gems, Face, Cheek art, Sparkle! Fun, unique and contemporary way to express yourself. Appeals to all! We offer a great selection to choose, children are excited to get SparkleTatts with their favorite Superheroes. I also create paper signs, banners, & grocery style paper. Insured A+",
     price: 300,
     daysOpen: {
       Sun: true,
@@ -313,7 +315,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/clothesByFraud.jpeg",
-    description: "Selling fraudulent designer items. They look exactly like the originals. Don’t report me to the police!",
+    description:
+      "Selling fraudulent designer items. They look exactly like the originals. Don’t report me to the police!",
     price: 50,
     daysOpen: {
       Sun: true,
@@ -335,7 +338,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/winnersCircleEntertainment.jpeg",
-    description: "Winner's Circle Tours and events was put together by Supa Soop (Derrell Alexander) and a community of independent artists, sponsored by Winner's Circle Clothing Co US & Canada",
+    description:
+      "Winner's Circle Tours and events was put together by Supa Soop (Derrell Alexander) and a community of independent artists, sponsored by Winner's Circle Clothing Co US & Canada",
     price: 50,
     daysOpen: {
       Sun: true,
@@ -344,7 +348,7 @@ export const businesses = [
       Wed: true,
       Thur: true,
       Fri: true,
-      Sat: true
+      Sat: true,
     },
   },
 
@@ -357,7 +361,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/bayAreaDjsCa.jpeg",
-    description: "We provide the right music for your timeless moments.Bay Area Djs CA. is a mobile Dj company. We provide music for all types of events and occasions. Since the mid 1990s, we have hosted a variety of events in and out of the Bay area, as far as Denver, Colorado. System comes equipped with MC services, lights, and fog machine. Our Djs are fluent in English and Spanish, which means we are able to make translations at any reception if necessary. Our Djs are professional and respectful at all events and always arrive one hour before start time of the reception. If needed, our references are available upon request. We have different packages available to fit your event.",
+    description:
+      "We provide the right music for your timeless moments.Bay Area Djs CA. is a mobile Dj company. We provide music for all types of events and occasions. Since the mid 1990s, we have hosted a variety of events in and out of the Bay area, as far as Denver, Colorado. System comes equipped with MC services, lights, and fog machine. Our Djs are fluent in English and Spanish, which means we are able to make translations at any reception if necessary. Our Djs are professional and respectful at all events and always arrive one hour before start time of the reception. If needed, our references are available upon request. We have different packages available to fit your event.",
     price: 875,
     daysOpen: {
       Sun: true,
@@ -379,7 +384,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/clubAnywhereMobileMusicAndLighting.jpeg",
-    description: "We've got your shelter in place outdoor entertainment ready when you are! We love music and having a great time! During these unstable times we decided to design a completely mobile party. We bring high quality professional audio equipment, professional lighting (for nighttime gigs) and thousands of smoke filled bubbles! We will mix your favorite music in advance and pull up to your car parade, your facility, driveway, parking lot or even a park. Our service is only outdoors and where all guests wear masks and follow the existing social distance requirements. Our special promotion is $99 for 45 minutes with 15 miles from Castro Valley included. Additional travel fee beyond 15 miles.",
+    description:
+      "We've got your shelter in place outdoor entertainment ready when you are! We love music and having a great time! During these unstable times we decided to design a completely mobile party. We bring high quality professional audio equipment, professional lighting (for nighttime gigs) and thousands of smoke filled bubbles! We will mix your favorite music in advance and pull up to your car parade, your facility, driveway, parking lot or even a park. Our service is only outdoors and where all guests wear masks and follow the existing social distance requirements. Our special promotion is $99 for 45 minutes with 15 miles from Castro Valley included. Additional travel fee beyond 15 miles.",
     price: 250,
     daysOpen: {
       Sun: true,
@@ -393,7 +399,7 @@ export const businesses = [
   },
 
   {
-   id: "12berkk",
+    id: "12berkk",
     name: "Knowledge",
     type: "Entertainment",
     subtype: "Live Music",
@@ -401,7 +407,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/knowledge.jpeg",
-    description: "durt gang we a rap group out of pittsburg ca we do live perfomances we give off a Postive vide we have good engery. We love entertaining our audience and also like networking.",
+    description:
+      "durt gang we a rap group out of pittsburg ca we do live perfomances we give off a Postive vide we have good engery. We love entertaining our audience and also like networking.",
     price: 100,
     daysOpen: {
       Sun: true,
@@ -423,7 +430,8 @@ export const businesses = [
     startTime: [0, 0],
     endTime: [24, 0],
     photo: "/images/Berkeley/razteria.jpeg",
-    description: "San Francisco, CA, based artist Razteria (aka Renée Asteria) can be described as a fusion of No Doubt and Bomba Estéreo. Her multicultural roots (Bolivia/Netherlands) are reflected in her music, as she crosses musical genres with powerful messages in multiple languages. Over the past decade, Razteria has planted musical seeds throughout the Americas and Europe. Noteworthy performances include Reggae on the River, World One Festival, World Fest Los Angeles, Northwest World Reggae Festival and the Montreal Jazz festival, to name a few.",
+    description:
+      "San Francisco, CA, based artist Razteria (aka Renée Asteria) can be described as a fusion of No Doubt and Bomba Estéreo. Her multicultural roots (Bolivia/Netherlands) are reflected in her music, as she crosses musical genres with powerful messages in multiple languages. Over the past decade, Razteria has planted musical seeds throughout the Americas and Europe. Noteworthy performances include Reggae on the River, World One Festival, World Fest Los Angeles, Northwest World Reggae Festival and the Montreal Jazz festival, to name a few.",
     price: 500,
     daysOpen: {
       Sun: true,
@@ -942,7 +950,7 @@ Traveling Makeup Artist within the Bay Area for all occasions. `,
     location: "Santa Clara",
     startTime: [0, 0],
     endTime: [24, 0],
-    photo: "/images/SantaClara/ANewDay&TimeEntertainment.png",
+    photo: "/images/SantaClara/ANewDayAndTimeEntertainment.png",
     description: `	
     A New Day And Time Entertainment is here to provide quality music and services for your special occasions.Our music collection has a wide variety which includes hip hop, R&B, old school funk, disco, latin, classic rock, 80s new wave, reggae/dancehall, blues and jazz. We love taking special requests and creating long lasting memories! Let us take your event to the next level!				
     `,

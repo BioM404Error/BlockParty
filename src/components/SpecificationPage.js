@@ -6,33 +6,13 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Context from "../context/context";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
 import styled from "@emotion/styled";
 import "./Pages.css";
-
-const CardBody = styled.div`
-  font-family: Helvetica;
-  padding-bottom: 2rem;
-  padding-top: 3rem;
-  background: "rgba(76, 175, 80, 0.4)";
-`;
-
-const Buttons = styled.div`
-  width: max(250px, 40%);
-  max-width: 700px;
-  height: 7%;
-  margin: 7vh auto 0 auto;
-  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
 
 export default function SpecificationPage(props) {
   const context = useContext(Context);
@@ -116,6 +96,17 @@ export default function SpecificationPage(props) {
       }
     }
   };
+
+  const Buttons = styled.div`
+    width: max(250px, 40%);
+    max-width: 700px;
+    height: 7%;
+    margin: 7vh auto 0 auto;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  `;
 
   return (
     <body className="specIm">
@@ -281,6 +272,8 @@ export default function SpecificationPage(props) {
               color: "black",
               borderColor: "black",
             }}
+            as={Link}
+            to="/"
           >
             Back
           </Button>

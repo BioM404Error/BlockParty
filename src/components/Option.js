@@ -58,7 +58,7 @@ export default function Option({
       </Price>
 
       <Buttons>
-        <Button variant="dark" onClick={addProduct}>
+        <Button variant="success" onClick={addProduct}>
           Add Business <FontAwesomeIcon icon={faCartPlus} />
         </Button>
       </Buttons>

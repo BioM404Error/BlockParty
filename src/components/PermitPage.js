@@ -6,51 +6,6 @@ import "./Pages.css";
 import styled from "@emotion/styled";
 import { BlendingEquation } from "three";
 
-const accessPermit = {
-  fontSize: "30px",
-  color: "black",
-  backgroundColor: "white",
-  fontFamily: "Helvetica",
-  boxShadow: "10px 10px 8px #888888",
-};
-
-const subText1 = {
-  fontSize: "20px",
-  color: "black",
-  textAlign: "center",
-  fontFamily: "Helvetica",
-  marginTop: "50px",
-};
-
-const Buttons = styled.div`
-  width: max(250px, 40%);
-  max-width: 500px;
-  height: 7%;
-  margin: 7vh auto 0 auto;
-  font-size: clamp(1rem, 2vw, 2rem);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const SmallButton = styled.div`
-  height: 125px;
-  width: 100px;
-  margin: 5vh auto 0 auto;
-  display: flex;
-`;
-
-/*const SmallButton = styled.div`
-    float: right;
-    width: 100%;
-    margin-right: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    height: 625px;
-    overflow: auto;
-'`;
-*/
-
 function Permit() {
   const context = useContext(Context);
 
@@ -63,6 +18,35 @@ function Permit() {
 
   const Body = styled.body`
     background-image: url(${background});
+    height: 94%;
+  `;
+
+  const accessPermit = {
+    fontSize: "30px",
+    color: "black",
+    backgroundColor: "white",
+    fontFamily: "Helvetica",
+    boxShadow: "10px 10px 8px #888888",
+  };
+
+  const subText1 = {
+    fontSize: "20px",
+    color: "black",
+    textAlign: "center",
+    fontFamily: "Helvetica",
+    paddingTop: "70px",
+    paddingBottom: "100px",
+  };
+
+  const Buttons = styled.div`
+    width: max(250px, 40%);
+    max-width: 500px;
+    height: 7%;
+    margin: 7vh auto 0 auto;
+    font-size: clamp(1rem, 2vw, 2rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   `;
 
   return (
@@ -87,31 +71,29 @@ function Permit() {
           {permit ? permit.timeline : "(No data, please restart...)"} before the
           event
         </p>
-        <SmallButton>
-          <Button
-            className="buttonB"
-            style={{
-              fontSize: "25px",
-              marginRight: "25px",
-              background: "white",
-              color: "black",
-              borderColor: "black",
-            }}
-            as={Link}
-            to="/specification"
-          >
-            Back
-          </Button>
-          <Button
-            className="buttonN"
-            style={{ fontSize: "25px" }}
-            variant="primary"
-            as={Link}
-            to="/location"
-          >
-            Next
-          </Button>
-        </SmallButton>
+        <Button
+          className="buttonB"
+          style={{
+            fontSize: "25px",
+            marginRight: "25px",
+            background: "white",
+            color: "black",
+            borderColor: "black",
+          }}
+          as={Link}
+          to="/specification"
+        >
+          Back
+        </Button>
+        <Button
+          className="buttonN"
+          style={{ fontSize: "25px" }}
+          variant="primary"
+          as={Link}
+          to="/location"
+        >
+          Next
+        </Button>
       </div>
     </Body>
   );

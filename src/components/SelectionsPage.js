@@ -1,28 +1,22 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import CardColumns from "react-bootstrap/CardColumns";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-
-const Buttons = styled.div`
-  height: 50px;
-  width: 100px;
-  margin: 10vh auto 0 auto;
-  display: flex;
-`;
+import "./Pages.css";
 
 const Content = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 76%;
   text-align: center;
+  overflow: hidden;
 `;
 
 export default function SelectionPage() {
   return (
-    <body>
+    <body style={{ height: "90%" }}>
       <div>
         <h1 className="main-title">SELECTIONS </h1>
         <h2 className="disclaimer">
@@ -36,7 +30,7 @@ export default function SelectionPage() {
                 style={{
                   width: "400px",
                   height: "75px",
-                  fontSize: "43px",
+                  fontSize: "45px",
                   fontFamily: "Impact",
                   background: "black",
                   boxShadow: "10px 10px 8px #888888",
@@ -120,20 +114,19 @@ export default function SelectionPage() {
           >
             Back
           </Button>
-          <Buttons>
-            <Button
-              style={{
-                fontSize: "25px",
-                textAlign: "center",
-                background: "linear-gradient(150deg, green, blue)",
-                border: "white",
-              }}
-              as={Link}
-              to="/payment"
-            >
-              Payment
-            </Button>
-          </Buttons>
+          <Button
+            style={{
+              fontSize: "25px",
+              textAlign: "center",
+              background: "linear-gradient(150deg, yellow, red)",
+              border: "white",
+              marginTop: "30px",
+            }}
+            as={Link}
+            to="/payment"
+          >
+            Payment
+          </Button>
         </Content>
       </div>
     </body>
