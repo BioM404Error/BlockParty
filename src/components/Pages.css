@@ -54,6 +54,14 @@
   background-color: white;
 }
 
+/* reciept page */
+
+.scroll {
+  overflow-y: scroll;
+  height: 100px;
+  padding: 1rem;
+}
+
 /*thank you page*/
 
 .tyImage {

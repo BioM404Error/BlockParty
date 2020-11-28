@@ -53,24 +53,31 @@ export default function Reciept(props) {
         PURCHASE COMPLETED!
       </h1>
       <Row style={{ display: "flex", justifyContent: "center" }}>
-        <Card style={{ boxShadow: "10px 10px 8px #888888" }}>
+        <Card
+          className="scroll"
+          style={{ height: "300px", boxShadow: "10px 10px 8px #888888" }}
+        >
           <Card.Body>
             {context.cart.map((item) => (
               <Row>
                 <Col>{item.subtype}</Col>
-                <Col>{item.name}</Col>
+                <Col style={{ fontWeight: "bold" }}>{item.name}</Col>
                 <Col>{item.type}</Col>
-                <Col>${item.price}</Col>
+                <Col style={{ fontWeight: "bold" }}>${item.price}</Col>
               </Row>
             ))}
-            <Row>
-              <Col style={{ fontWeight: "bold" }}>Service Fee</Col>
-              <Col>{serviceFee}</Col>
+            <Row style={{ paddingTop: "30px", fontWeight: "bold" }}>
+              Service Fee
+              <Col> ${serviceFee}</Col>
             </Row>
             <Row style={{ fontWeight: "900" }}>
-              Total $
-              {context.cart.reduce((acc, cur) => acc + cur.price, 0) +
-                serviceFee}
+              Total
+              <Col>
+                {" "}
+                $
+                {context.cart.reduce((acc, cur) => acc + cur.price, 0) +
+                  serviceFee}
+              </Col>
             </Row>
           </Card.Body>
         </Card>
@@ -96,7 +103,8 @@ export default function Reciept(props) {
             color: "black",
             textAlign: "center",
             justifyContent: "center",
-            paddingTop: "100px",
+            paddingTop: "50px",
+            fontSize: "20px",
           }}
         >
           Thank you for Throwing a Block Party and Supporting Small Businesses!
