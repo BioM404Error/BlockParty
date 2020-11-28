@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+/*multiple pages*/
+
+.main-title {
+  font-size: 80px;
+  color: black;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 15px;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 20px;
+}
+.boxed {
+  border-radius: 100px;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 25px;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 15px;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*css for the next and back buttons*/
+.buttonN {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.buttonB {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+/*specs page*/
+.cardBody {
+  background: rgba(255, 0, 0, 0.078);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 15px 50px 30px;
+}
+
+/*permit page*/
+
+.permit {
+  background-color: white;
+  background-size: cover;
+}
+
+/* reciept page */
+
+.scroll {
+  overflow-y: scroll;
+  height: 100px;
+  padding: 1rem;
+}
+
+/*thank you page*/
+
+.tyImage {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.783),
+      rgba(160, 160, 160, 0.783)
+    ),
+    url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parting {
+  font-family: Helvetica;
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+.special {
+  font-family: Impact;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+/*thank you small business*/
+.bgTy {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.783),
+      rgba(160, 160, 160, 0.783)
+    ),
+    url("https://images.unsplash.com/photo-1562077790-5fab0c2e49eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2503&q=80");
+}
