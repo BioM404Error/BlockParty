@@ -41,13 +41,13 @@ export default function SpecificationPage(props) {
       date === undefined ||
       city === "Choose..."
     ) {
-      setWarning("Please input a value in all fields");
+      setWarning("Please enter value in all fields");
       handleShow();
     } else if (capacity <= 0) {
-      setWarning("Please input an estimated number of attendees");
+      setWarning("Please enter an estimated number of attendees");
       handleShow();
     } else if (budget <= 0) {
-      setWarning("Please input a budget");
+      setWarning("Please enter a budget");
       handleShow();
     } else {
       let today = new Date();
@@ -76,11 +76,11 @@ export default function SpecificationPage(props) {
         (todayYyyy === userYyyy && todayMm > userMm) ||
         (todayYyyy === userYyyy && todayMm === userMm && userDd <= todayDd)
       ) {
-        setWarning("Please input a date in the future");
+        setWarning("Please enter a date in the future");
         handleShow();
       } else if (userYyyy - todayYyyy > 5) {
         setWarning(
-          "Block party cannot be planned more than 5 year in advance..."
+          "Block party cannot be planned more than 5 years in advance..."
         );
         handleShow();
       } else {

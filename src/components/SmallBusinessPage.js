@@ -90,6 +90,7 @@ export default function SmallBusinessPage(props) {
           </p>
         </div>
 
+<<<<<<< HEAD
         <Card
           style={{
             borderColor: "transparent",
@@ -123,6 +124,71 @@ export default function SmallBusinessPage(props) {
               to="/"
             >
               No Thanks
+=======
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>We Are Happy To Connect </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <Form.Group as={Row}>
+              <Form.Label style={{ display: "flex" }} column sm="2">
+                Name <p style={{ color: "red" }}>*</p>
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control required type="text" placeholder="Ex: Jane Doe" />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a valid name. Ex: Jane Doe
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column sm="2" style={{ display: "flex" }}>
+                Email
+                <p style={{ color: "red" }}>*</p>
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control required type="email" placeholder="Ex: jane.doe@organization.com" />
+                <Form.Control.Feedback type="invalid">
+                  Please choose a valid email. Ex: jane.doe@organization.com
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column sm="2">
+                Phone Number
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="Ex: 012-345-6789"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please insert a valid phone number. Ex: 012-345-6789
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label column sm="2">
+                Link to Socials
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control type="url" placeholder="Ex: https://www.instagram.com/JanesDoenuts" />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a valid social media url. Ex: https://www.instagram.com/JanesDoenuts
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>
+                Tell us a little bit more about your business!
+              </Form.Label>
+              <Form.Control as="textarea" rows={3}></Form.Control>
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Send
+>>>>>>> d6dfe4cf380d2a5315df3326f728083a187e4d08
             </Button>
           </Card.Body>
         </Card>
