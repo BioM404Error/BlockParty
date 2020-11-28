@@ -6,8 +6,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
+import { Link, useHistory } from "react-router-dom";
+import BasicNavbar from "./BasicNav";
 
 export default function SmallBusinessPage(props) {
   const [show, setShow] = useState(false);
@@ -48,6 +49,7 @@ export default function SmallBusinessPage(props) {
       }}
     >
       <div style={{ background: "white" }}>
+        <BasicNavbar/>
         <h1
           className="main-title"
           style={{
@@ -132,13 +134,16 @@ export default function SmallBusinessPage(props) {
             <Modal.Title>We Are Happy To Connect! </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form>
+            <Form  noValidate validated={validated} onSubmit={handleSubmit} >
               <Form.Group as={Row}>
                 <Form.Label style={{ display: "flex" }} column sm="2">
                   Name <p style={{ color: "red" }}>*</p>
                 </Form.Label>
                 <Col sm="10">
-                  <Form.Control required placeholder="Enter Name" />
+                  <Form.Control required placeholder="Ex: Jane Doe" />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a valid name. Ex: Jane Doe
+                  </Form.Control.Feedback>
                 </Col>
               </Form.Group>
               <Form.Group as={Row}>
@@ -150,8 +155,11 @@ export default function SmallBusinessPage(props) {
                   <Form.Control
                     required
                     type="email"
-                    placeholder="Enter Email"
+                    placeholder="Ex: jane.doe@organization.com"
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a valid email. Ex: jane.doe@organization.com
+                  </Form.Control.Feedback>
                 </Col>
               </Form.Group>
               <Form.Group as={Row}>
@@ -162,8 +170,11 @@ export default function SmallBusinessPage(props) {
                   <Form.Control
                     type="tel"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="Enter Phone Number ###-###-###"
+                    placeholder="Ex: 012-345-6789"
                   />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a valid phone number. Ex: 012-345-6789
+                  </Form.Control.Feedback>
                 </Col>
               </Form.Group>
               <Form.Group as={Row}>
@@ -171,7 +182,10 @@ export default function SmallBusinessPage(props) {
                   Link to Socials
                 </Form.Label>
                 <Col sm="10">
-                  <Form.Control type="url" placeholder="Enter link" />
+                  <Form.Control type="url" placeholder="Ex: https://www.instagram.com/JanesDoenuts" />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a valid social media url. Ex: https://www.instagram.com/JanesDoenuts
+                  </Form.Control.Feedback> 
                 </Col>
               </Form.Group>
               <Form.Group>
@@ -180,7 +194,7 @@ export default function SmallBusinessPage(props) {
                 </Form.Label>
                 <Form.Control as="textarea" rows={3}></Form.Control>
               </Form.Group>
-              <Button variant="primary" as={Link} to="/smallbusiness/thankyou">
+              <Button variant="primary" type="submit">
                 Send
               </Button>
             </Form>

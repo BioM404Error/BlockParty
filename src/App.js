@@ -13,8 +13,6 @@ import Button from "react-bootstrap/Button";
 import Reciept from "./components/RecieptPage";
 import Payment from "./components/PaymentPage";
 import Landing from "./components/Landing/index";
-import ConsumerNavbar from "./components/ConsumerNav";
-import BasicNavbar from "./components/BasicNav";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -25,7 +23,6 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/permit">
-              <ConsumerNavbar/>
               <Permit />
             </Route>
             <Route exact path="/specification">
@@ -35,42 +32,33 @@ function App() {
               <ThanksSmallBusiness />
             </Route>
             <Route exact path="/smallbusiness">
-              <BasicNavbar/>
               <SmallBusinessPage />
             </Route>
             <Route exact path="/selections">
-              <ConsumerNavbar/>
               <SelectionsPage />
             </Route>
             <Route exact path="/selections/Food">
-              <ConsumerNavbar/>
               <Category type="Food" />
             </Route>
             <Route exact path="/selections/Cosmetics">
-              <ConsumerNavbar/>
               <Category type="Cosmetics" />
             </Route>
             <Route exact path="/selections/Clothing"> 
-              <ConsumerNavbar/>
               <Category type="Clothing" />
             </Route>
             <Route exact path="/selections/Entertainment">
-              <ConsumerNavbar/>
               <Category type="Entertainment" />
             </Route>
             <Route exact path="/thankyou">
               <ThankYou />
             </Route>
             <Route exact path="/payment">
-              <ConsumerNavbar/>
               <Payment />
             </Route>
             <Route exact path="/reciept">
-              <BasicNavbar/>
               <Reciept />
             </Route>
             <Route exact path="/location">
-              <ConsumerNavbar/>
               <div>
                 <h1>Location tbd...</h1>
                 <Button variant="secondary" as={Link} to="/permit">

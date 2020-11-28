@@ -5,9 +5,10 @@ import styled from "@emotion/styled";
 
 const Buttons = styled.div`
   height: 55px;
-  width: 200px;
+  width: 400px;
   margin: 10vh auto 0 auto;
   display: flex;
+  justify-content: center;
 `;
 
 export default function ThankYou() {

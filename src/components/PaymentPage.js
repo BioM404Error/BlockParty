@@ -6,6 +6,7 @@ import Context from "../context/context";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
+import ConsumerNavbar from "./ConsumerNav";
 
 export default function Payment(props) {
   const context = useContext(Context);
@@ -16,7 +17,13 @@ export default function Payment(props) {
   const handleClose = () => setShow(false);
 
   return (
-    <div>
+    <div
+      style={{
+        overflow: "hidden"
+      }}
+    >
+      <ConsumerNavbar />
+      
       <h1 className="main-title"> GIVE US THE DOE </h1>
       <h2 className="disclaimer" style={{ paddingBottom: "20px" }}>
         {" "}
@@ -94,11 +101,15 @@ export default function Payment(props) {
         <Col>
           <h1> Cart Total</h1>
           <Card
+            className="scroll"
             style={{
               boxShadow: "10px 10px 8px #888888",
               justifyContent: "center",
               marginRight: "100px",
               maxWidth: "400px",
+              overflow: "auto",
+              height: "350px"
+
             }}
           >
             <Card.Body>

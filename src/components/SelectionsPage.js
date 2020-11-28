@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import "./Pages.css";
+import ConsumerNavbar from "./ConsumerNav";
 
 const Content = styled.div`
   position: absolute;
@@ -18,6 +19,7 @@ export default function SelectionPage() {
   return (
     <body style={{ height: "90%" }}>
       <div>
+        <ConsumerNavbar />
         <h1 className="main-title">SELECTIONS </h1>
         <h2 className="disclaimer">
           {" "}
@@ -28,7 +30,7 @@ export default function SelectionPage() {
             <Card.Body style={{ justifyContent: "space-between" }}>
               <Button
                 style={{
-                  width: "400px",
+                  width: "500px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
@@ -47,7 +49,7 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "400px",
+                  width: "500px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
@@ -66,7 +68,7 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "400px",
+                  width: "500px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
@@ -85,7 +87,7 @@ export default function SelectionPage() {
             <Card.Body>
               <Button
                 style={{
-                  width: "400px",
+                  width: "500px",
                   height: "75px",
                   fontSize: "45px",
                   fontFamily: "Impact",
