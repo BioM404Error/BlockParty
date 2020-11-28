@@ -9,6 +9,7 @@ import Modal from "react-bootstrap/Modal";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
+import BasicNavbar from "./BasicNav";
 
 export default function Reciept(props) {
   const context = useContext(Context);
@@ -47,7 +48,12 @@ export default function Reciept(props) {
   `;
 
   return (
-    <div>
+    <div
+      style={{
+        overflow: "hidden"
+      }}
+    >
+      <BasicNavbar />
       <h1 className="main-title" style={{ paddingBottom: "50px" }}>
         {" "}
         PURCHASE COMPLETED!

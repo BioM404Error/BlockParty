@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Context from "../context/context";
 import Button from "react-bootstrap/Button";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Pages.css";
 import styled from "@emotion/styled";
-import { BlendingEquation } from "three";
+
+import ConsumerNavbar from "./ConsumerNav";
 
 function Permit() {
   const context = useContext(Context);
@@ -18,7 +19,9 @@ function Permit() {
 
   const Body = styled.body`
     background-image: url(${background});
-    height: 94%;
+    background-size:cover;
+    margin: 0;
+    height: 100vh;
   `;
 
   const accessPermit = {
@@ -35,7 +38,7 @@ function Permit() {
     textAlign: "center",
     fontFamily: "Helvetica",
     paddingTop: "70px",
-    paddingBottom: "100px",
+    paddingBottom: "75px",
   };
 
   const Buttons = styled.div`
@@ -52,6 +55,7 @@ function Permit() {
   return (
     <Body>
       <div className="permit">
+      <ConsumerNavbar/>
         <h1 className="main-title">APPLY FOR A PERMIT</h1>
         <div>
           <Buttons>

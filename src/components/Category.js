@@ -13,6 +13,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import OptionInformationModal from "./OptionInformationModal";
 import RemainingBudget from "./RemainingBudget";
 import styled from "@emotion/styled";
+import ConsumerNavbar from "./ConsumerNav";
 
 export default function Category(props) {
   const context = useContext(Context);
@@ -52,6 +53,7 @@ export default function Category(props) {
 
   return (
     <React.Fragment>
+      <ConsumerNavbar />
       <div
         style={{
           margin: "2rem",

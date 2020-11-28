@@ -52,6 +52,7 @@
 
 .permit {
   background-color: white;
+  background-size: cover;
 }
 
 /* reciept page */
@@ -70,6 +71,8 @@
       rgba(160, 160, 160, 0.783)
     ),
     url("https://images.unsplash.com/photo-1557801200-9a8d901ded2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2187&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .parting {
