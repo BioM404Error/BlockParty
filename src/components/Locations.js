@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "@emotion/styled";
 import LocationCard from "./LocationCard";
+import venues from "../context/locations.json";
+import Context from "../context/context";
 
 const Content = styled.div`
   width: 100vw;
@@ -20,13 +22,23 @@ const Header = styled.div`
 `
 
 const Locations = () => {
+  const context = useContext(Context);
+  const venueArr = [];
+  for (let venue of venues) {
+    if (venue.city === context.location) {
+      venueArr.push(
+        <LocationCard title={venue.name} subtitle={venue.address} desc={venue.desc} link="/selections" imgSrc={venue.img}/>
+      )
+    }
+  }
+
+
   return (
     <Content>
       <Header>
         Available Locations
       </Header>
-      <LocationCard title="Loc1" subtitle="sub1" desc="hello world" link="/selections"/>
-      <LocationCard title="Loc1" subtitle="sub1" desc="hello world" link="/selections"/>
+      {venueArr}
     </Content>
   )
 }
