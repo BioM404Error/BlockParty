@@ -1,6 +1,6 @@
 export const businesses = [
   {
-    id: "1scrcmp",
+    id: "sc",
     name: "Mission Plaza",
     capacity: 3000,
     photo: "/images/SantaCruz/missionPlaza.jpeg",
@@ -19,7 +19,7 @@ export const businesses = [
     },
   },
   {
-    id: "2scrcdpp",
+    id: "sc",
     name: "Depot Park Plaza",
     capacity: 1000,
     photo: "/images/SantaCruz/depotParkPlaza.jpeg",
@@ -39,7 +39,7 @@ export const businesses = [
   },
 
   {
-    id: "3scrccb",
+    id: "sc",
     name: "Cowell Beach",
     capacity: 400,
     photo: "/images/SantaCruz/cowellBeach.jpg",
@@ -59,7 +59,7 @@ export const businesses = [
   },
 
   {
-    id: "4scrcmb",
+    id: "sc",
     name: "Main Beach",
     capacity: 6000,
     photo: "/images/SantaCruz/mainBeach.jpg",
@@ -79,7 +79,7 @@ export const businesses = [
   },
 
   {
-    id: "1sclccpp",
+    id: "sca",
     name: "Central Park Pavillian",
     capacity: 3000,
     photo: "/images/SantaClara/CentralParkPavilian.png",
@@ -99,7 +99,7 @@ export const businesses = [
   },
 
   {
-    id: "2sclcps",
+    id: "sca",
     name: "Poplar Street",
     capacity: 5000,
     photo: "/images/SantaClara/PoplarStreet.png",
@@ -119,7 +119,7 @@ export const businesses = [
   },
 
   {
-    id: "3sclcaa",
+    id: "sca",
     name: "Arbor Area",
     capacity: 250,
     photo: "/images/SantaClara/ArborArea.png",
@@ -139,7 +139,7 @@ export const businesses = [
   },
 
   {
-    id: "4sclcccp",
+    id: "sca",
     name: "Civic Center Park",
     capacity: 500,
     photo: "/images/SantaClara/CivicCenterPark.png",
@@ -159,7 +159,7 @@ export const businesses = [
   },
 
   {
-    id: "1berksp",
+    id: "brk",
     name: "Skate Park",
     capacity: 500,
     photo: "/images/Berkeley/SkatePark.png",
@@ -179,7 +179,7 @@ export const businesses = [
   },
 
   {
-    id: "2berklop",
+    id: "brk",
     name: "Live Oak Park",
     capacity: 5,
     photo: "/images/Berkeley/LiveOakPark.png",
@@ -199,7 +199,7 @@ export const businesses = [
   },
 
   {
-    id: "3berkcp",
+    id: "brk",
     name: "Codornices park",
     capacity: 500,
     photo: "/images/Berkeley/CodornicesPark.png",
@@ -219,7 +219,7 @@ export const businesses = [
   },
 
   {
-    id: "4berkscp",
+    id: "brk",
     name: "Strawberry Creek Park",
     capacity: 500,
     photo: "/images/Berkeley/StrawberryCreekPark.png",
