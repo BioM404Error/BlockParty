@@ -85,27 +85,28 @@ export default function Reciept(props) {
         <Modal.Body>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label style={{ display: "flex" }}>
+                Email address <p style={{ color: "red" }}>*</p>
+              </Form.Label>
               <InputGroup>
               <Form.Control
                 required
                 type="email"
-                placeholder="jane.doe@organization.com" />
+                placeholder="Ex: jane.doe@organization.com" />
               <Form.Control.Feedback type="invalid">
-                  Please choose a valid email. Ex: jane.doe@organization.com
+                  Please enter a valid email. Ex: jane.doe@organization.com
               </Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
             <Form.Group controlId="formPhoneNumber">
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
-                required
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Enter Phone Number ###-###-###"
+                placeholder="Ex: 012-345-6789"
               />
               <Form.Control.Feedback type="invalid">
-              Please insert a valid phone number. Ex: 012-345-6789
+              Please enter a valid phone number. Ex: 012-345-6789
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Row>

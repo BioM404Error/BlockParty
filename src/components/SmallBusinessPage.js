@@ -68,7 +68,7 @@ export default function SmallBusinessPage(props) {
                 Name <p style={{ color: "red" }}>*</p>
               </Form.Label>
               <Col sm="10">
-                <Form.Control required type="text" placeholder="Enter Name" />
+                <Form.Control required type="text" placeholder="Ex: Jane Doe" />
                 <Form.Control.Feedback type="invalid">
                   Please enter a valid name. Ex: Jane Doe
                 </Form.Control.Feedback>
@@ -80,7 +80,7 @@ export default function SmallBusinessPage(props) {
                 <p style={{ color: "red" }}>*</p>
               </Form.Label>
               <Col sm="10">
-                <Form.Control required type="email" placeholder="Enter Email" />
+                <Form.Control required type="email" placeholder="Ex: jane.doe@organization.com" />
                 <Form.Control.Feedback type="invalid">
                   Please choose a valid email. Ex: jane.doe@organization.com
                 </Form.Control.Feedback>
@@ -94,7 +94,7 @@ export default function SmallBusinessPage(props) {
                 <Form.Control
                   type="tel"
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="Enter Phone Number ###-###-###"
+                  placeholder="Ex: 012-345-6789"
                 />
                 <Form.Control.Feedback type="invalid">
                   Please insert a valid phone number. Ex: 012-345-6789
@@ -106,7 +106,7 @@ export default function SmallBusinessPage(props) {
                 Link to Socials
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="url" placeholder="Enter link" />
+                <Form.Control type="url" placeholder="Ex: https://www.instagram.com/JanesDoenuts" />
                 <Form.Control.Feedback type="invalid">
                   Please enter a valid social media url. Ex: https://www.instagram.com/JanesDoenuts
                 </Form.Control.Feedback>
