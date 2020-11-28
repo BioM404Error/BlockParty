@@ -8,6 +8,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 547,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Plaza",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -27,6 +29,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 150,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Plaza",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -47,6 +51,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 480,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Beach",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -67,6 +73,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 3497,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Beach",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -87,6 +95,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 547,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Pavillian",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -107,6 +117,8 @@ export const businesses = [
     endTime: [24, 0],
     price: 10,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Street",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -127,6 +139,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 256,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Arbor",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -147,6 +161,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 370,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -167,6 +183,8 @@ export const businesses = [
     endTime: [21, 0],
     price: 275,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -187,6 +205,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 369,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -200,13 +220,15 @@ export const businesses = [
 
   {
     id: "brk",
-    name: "Codornices park",
+    name: "Codornices Park",
     capacity: 500,
     photo: "/images/Berkeley/CodornicesPark.png",
     startTime: [5, 0],
     endTime: [23, 0],
     price: 300,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -227,6 +249,8 @@ export const businesses = [
     endTime: [21, 0],
     price: 375,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
