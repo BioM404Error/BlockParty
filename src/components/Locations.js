@@ -89,7 +89,7 @@ const Locations = (props) => {
 
   return (
     <>
-      <Content style={{overflow:"hidden"}}>
+      <Content style={{overflow:"auto"}}>
         <ConsumerNavbar />
        <div
         style={{
