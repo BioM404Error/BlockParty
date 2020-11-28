@@ -149,7 +149,7 @@ const Locations = (props) => {
                   width: "2vw",
                   overflow: "hidden",
                 }} key={option.id}>
-                  <Card.Img variant="top" src={option.photo} style={{height:"60%"}} />
+                  <Card.Img variant="top" src={option.photo} style={{height:"50%"}} />
                   <Card.Body style={{overflow: "visible",}}>
                     <Card.Title>{option.name}: ${option.price} </Card.Title>
                     <Card.Text>
