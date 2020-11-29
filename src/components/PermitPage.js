@@ -11,7 +11,6 @@ function Permit() {
   const context = useContext(Context);
 
   const permit = context.permitUrls[context.location];
-  console.log(context.location);
   const background =
     context.location !== "Choose..."
       ? context.permitUrls[context.location].image
@@ -19,7 +18,7 @@ function Permit() {
 
   const Body = styled.body`
     background-image: url(${background});
-    background-size:cover;
+    background-size: cover;
     margin: 0;
     height: 100vh;
   `;
@@ -55,7 +54,7 @@ function Permit() {
   return (
     <Body>
       <div className="permit">
-      <ConsumerNavbar/>
+        <ConsumerNavbar />
         <h1 className="main-title">APPLY FOR A PERMIT</h1>
         <div>
           <Buttons>
