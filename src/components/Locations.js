@@ -123,9 +123,6 @@ const Locations = (props) => {
           display: "flex"
           }}>
           <CardDeck style={{
-            overflow: "auto",
-            width: "80vw",
-            height: "700px",
           justifyContent: "center"
           }}>
               {context.products
@@ -145,12 +142,10 @@ const Locations = (props) => {
               .map((option) => (
                 <Card style={{
                   margin: "2rem",
-                  height: "80%",
-                  width: "2vw",
-                  overflow: "hidden",
+                  overflow: "auto",
                 }} key={option.id}>
                   <Card.Img variant="top" src={option.photo} style={{height:"50%"}} />
-                  <Card.Body style={{overflow: "visible",}}>
+                  <Card.Body style={{overflow: "auto",}}>
                     <Card.Title>{option.name}: ${option.price} </Card.Title>
                     <Card.Text>
                       Located in {option.city}, {option.name} has the capacity to hold {option.capacity} people. It's hours are between {getHours(option)}.
