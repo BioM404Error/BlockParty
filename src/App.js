@@ -8,13 +8,12 @@ import GlobalState from "./context/GlobalState";
 import Permit from "./components/PermitPage";
 import ThankYou from "./components/ThankYou";
 import SpecificationPage from "./components/SpecificationPage";
-import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import Reciept from "./components/RecieptPage";
 import Payment from "./components/PaymentPage";
-import Landing from "./components/Landing/index";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Locations from "./components/Locations";
+import Landing from "./components/Landing/index"
+
 
 function App() {
   return (
@@ -43,7 +42,7 @@ function App() {
             <Route exact path="/selections/Cosmetics">
               <Category type="Cosmetics" />
             </Route>
-            <Route exact path="/selections/Clothing"> 
+            <Route exact path="/selections/Clothing">
               <Category type="Clothing" />
             </Route>
             <Route exact path="/selections/Entertainment">
@@ -59,15 +58,7 @@ function App() {
               <Reciept />
             </Route>
             <Route exact path="/location">
-              <div>
-                <h1>Location tbd...</h1>
-                <Button variant="secondary" as={Link} to="/permit">
-                  Back
-                </Button>
-                <Button variant="primary" as={Link} to="/selections">
-                  Next
-                </Button>
-              </div>
+              <Locations />
             </Route>
             <Route exact path="/">
               <Landing />

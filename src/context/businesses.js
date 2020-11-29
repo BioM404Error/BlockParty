@@ -1,6 +1,6 @@
 export const businesses = [
   {
-    id: "1scrcmp",
+    id: "sc",
     name: "Mission Plaza",
     capacity: 3000,
     photo: "/images/SantaCruz/missionPlaza.jpeg",
@@ -8,6 +8,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 547,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Plaza",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -19,7 +21,7 @@ export const businesses = [
     },
   },
   {
-    id: "2scrcdpp",
+    id: "sc",
     name: "Depot Park Plaza",
     capacity: 1000,
     photo: "/images/SantaCruz/depotParkPlaza.jpeg",
@@ -27,6 +29,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 150,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Plaza",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -39,7 +43,7 @@ export const businesses = [
   },
 
   {
-    id: "3scrccb",
+    id: "sc",
     name: "Cowell Beach",
     capacity: 400,
     photo: "/images/SantaCruz/cowellBeach.jpg",
@@ -47,6 +51,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 480,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Beach",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -59,7 +65,7 @@ export const businesses = [
   },
 
   {
-    id: "4scrcmb",
+    id: "sc",
     name: "Main Beach",
     capacity: 6000,
     photo: "/images/SantaCruz/mainBeach.jpg",
@@ -67,6 +73,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 3497,
     city: "Santa Cruz",
+    type: "Location",
+    subtype: "Beach",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -79,7 +87,7 @@ export const businesses = [
   },
 
   {
-    id: "1sclccpp",
+    id: "sca",
     name: "Central Park Pavillian",
     capacity: 3000,
     photo: "/images/SantaClara/CentralParkPavilian.png",
@@ -87,6 +95,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 547,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Pavillian",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -99,7 +109,7 @@ export const businesses = [
   },
 
   {
-    id: "2sclcps",
+    id: "sca",
     name: "Poplar Street",
     capacity: 5000,
     photo: "/images/SantaClara/PoplarStreet.png",
@@ -107,6 +117,8 @@ export const businesses = [
     endTime: [24, 0],
     price: 10,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Street",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -119,7 +131,7 @@ export const businesses = [
   },
 
   {
-    id: "3sclcaa",
+    id: "sca",
     name: "Arbor Area",
     capacity: 250,
     photo: "/images/SantaClara/ArborArea.png",
@@ -127,6 +139,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 256,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Arbor",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -139,7 +153,7 @@ export const businesses = [
   },
 
   {
-    id: "4sclcccp",
+    id: "sca",
     name: "Civic Center Park",
     capacity: 500,
     photo: "/images/SantaClara/CivicCenterPark.png",
@@ -147,6 +161,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 370,
     city: "Santa Clara",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -159,7 +175,7 @@ export const businesses = [
   },
 
   {
-    id: "1berksp",
+    id: "brk",
     name: "Skate Park",
     capacity: 500,
     photo: "/images/Berkeley/SkatePark.png",
@@ -167,6 +183,8 @@ export const businesses = [
     endTime: [21, 0],
     price: 275,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -179,7 +197,7 @@ export const businesses = [
   },
 
   {
-    id: "2berklop",
+    id: "brk",
     name: "Live Oak Park",
     capacity: 5,
     photo: "/images/Berkeley/LiveOakPark.png",
@@ -187,6 +205,8 @@ export const businesses = [
     endTime: [22, 0],
     price: 369,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -199,14 +219,16 @@ export const businesses = [
   },
 
   {
-    id: "3berkcp",
-    name: "Codornices park",
+    id: "brk",
+    name: "Codornices Park",
     capacity: 500,
     photo: "/images/Berkeley/CodornicesPark.png",
     startTime: [5, 0],
     endTime: [23, 0],
     price: 300,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -219,7 +241,7 @@ export const businesses = [
   },
 
   {
-    id: "4berkscp",
+    id: "brk",
     name: "Strawberry Creek Park",
     capacity: 500,
     photo: "/images/Berkeley/StrawberryCreekPark.png",
@@ -227,6 +249,8 @@ export const businesses = [
     endTime: [21, 0],
     price: 375,
     city: "Berkeley",
+    type: "Location",
+    subtype: "Park",
     daysOpen: {
       Sun: true,
       Mon: true,
