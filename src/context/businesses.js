@@ -271,7 +271,7 @@ export const businesses = [
     endTime: [24, 0],
     photo: "/images/Berkeley/southernCreations.jpeg",
     description: "We are a BBQ and Southern Style Food Service company.",
-    price: 5300,
+    price: 530,
     daysOpen: {
       Sun: true,
       Mon: true,
@@ -294,7 +294,7 @@ export const businesses = [
     photo: "/images/Berkeley/suisSuisFrenchCaribbeanCuisine.png",
     description:
       "Suis Suis Caribbean Cuisine is an Afro-Caribbean Culinary Fusion which brings the uniquely cultivated recipes and flavors from across the Caribbean and African Diaspora to your table in minutes.",
-    price: 2000,
+    price: 200,
     daysOpen: {
       Sun: true,
       Mon: true,
