@@ -80,7 +80,7 @@ const GlobalState = (props) => {
         date: partyState.date,
         endTime: partyState.endTime,
         startTime: partyState.startTime,
-        capacity: partyState.budget,
+        capacity: partyState.capacity,
         products: products,
         permitUrls: permitUrls,
         cart: partyState.cart,
