@@ -32,7 +32,10 @@ const Buttons = styled.div`
 const Locations = (props) => {
   const context = useContext(Context);
   const [showCart, setShowCart] = useState(false);
-  const handleCartShow = () => setShowCart(true);
+  const handleCartShow = () => {
+    setShowCart(true);
+    console.log(`Capacity is ${ context.capacity }`)
+  }
   const handleCartClose = () => {
     setShowCart(false);
   };
@@ -133,6 +136,7 @@ const Locations = (props) => {
                 (option) =>
                   option.city === context.location &&
                   option.daysOpen[context.weekday] &&
+                  parseInt(option.capacity) >= parseInt(context.capacity) &&
                   !(
                     option.startTime[0] <= partyStartTime[0] &&
                     option.endTime[0] <= partyStartTime[0]
