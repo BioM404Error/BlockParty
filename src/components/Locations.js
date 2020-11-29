@@ -16,7 +16,7 @@ import "./Pages.css";
 
 const Content = styled.div`
   width: 100vw;
-  height: 90vh;
+  height: auto;
 `;
 
 const Buttons = styled.div`
@@ -34,8 +34,7 @@ const Locations = (props) => {
   const [showCart, setShowCart] = useState(false);
   const handleCartShow = () => {
     setShowCart(true);
-    console.log(`Capacity is ${ context.capacity }`)
-  }
+  };
   const handleCartClose = () => {
     setShowCart(false);
   };
@@ -91,7 +90,7 @@ const Locations = (props) => {
 
   return (
     <>
-      <Content style={{ overflow: "hidden" }}>
+      <Content style={{ overflowX: "hidden" }}>
         <ConsumerNavbar />
         <div
           style={{
@@ -118,6 +117,18 @@ const Locations = (props) => {
             {context.cart.length})
           </Button>
         </div>
+        <div>
+          <h2
+            style={{
+              fontWeight: "bold",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {" "}
+            *You can only select one location*
+          </h2>
+        </div>
         <div
           style={{
             display: "flex",
@@ -142,7 +153,8 @@ const Locations = (props) => {
                 (option) =>
                   option.city === context.location &&
                   option.daysOpen[context.weekday] &&
-                  parseInt(option.capacity) >= parseInt(context.capacity) &&
+                  (option.default ||
+                    parseInt(option.capacity) >= parseInt(context.capacity)) &&
                   !(
                     option.startTime[0] <= partyStartTime[0] &&
                     option.endTime[0] <= partyStartTime[0]
@@ -157,6 +169,7 @@ const Locations = (props) => {
                   style={{
                     margin: "2rem",
                     boxShadow: "10px 10px 5px grey",
+                    maxWidth: "400px",
                   }}
                   key={option.id}
                 >

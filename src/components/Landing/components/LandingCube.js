@@ -1,24 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
 
-const COLORS = [
-  "red",
-  "yellow",
-  "green",
-  "blue"
-];
+const COLORS = ["red", "yellow", "green", "blue"];
 
 const LandingCube = (props) => {
   const { color, posX, posY, rotDir } = props;
   const box = useRef();
-  const [ changeColor, setChangeColor ] = useState(false);
-  const [ boxColor, setBoxColor ] = useState(color);
+  const [changeColor, setChangeColor] = useState(false);
+  const [boxColor, setBoxColor] = useState(color);
 
   useFrame(({ clock, delta }) => {
     if (box.current) {
       box.current.rotation.x = clock.getElapsedTime() / 2.5;
       box.current.position.y = Math.min(box.current.position.y - 0.005, posY);
-      // console.log(`current: ${box.current.position.y - 0.005}\nposY: ${posY}`)
       if (box.current.position.y >= 3.73) {
         setChangeColor(true);
       } else {
@@ -39,7 +33,7 @@ const LandingCube = (props) => {
         box.current.position.y = 3.75;
       }
     }
-  })
+  });
 
   useEffect(() => {
     if (changeColor) {
@@ -47,12 +41,14 @@ const LandingCube = (props) => {
     }
   }, [changeColor]);
 
-  return  <group position={[posX, posY, 0]} ref={box} castShadow>
-    <mesh castShadow receiveShadow>
-      <boxBufferGeometry attach="geometry" args={[0.35, 0.35, 0.35]} />
-      <meshStandardMaterial attach="material" color={boxColor} />
-    </mesh>
-  </group>
-}
+  return (
+    <group position={[posX, posY, 0]} ref={box} castShadow>
+      <mesh castShadow receiveShadow>
+        <boxBufferGeometry attach="geometry" args={[0.35, 0.35, 0.35]} />
+        <meshStandardMaterial attach="material" color={boxColor} />
+      </mesh>
+    </group>
+  );
+};
 
-export default LandingCube
+export default LandingCube;
