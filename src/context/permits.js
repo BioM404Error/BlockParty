@@ -15,7 +15,7 @@ export const permits = {
   },
   "Santa Cruz": {
     url:
-      "https://www.cityofsantacruz.com/government/city-departments/parks-recreation/special-event-permits/block-parties",
+      "https://www.cityofsantacruz.com/government/city-departments/parks-recreation/event-permits/block-parties",
     timeline: "30 days",
     image:
       "https://images.unsplash.com/photo-1546577732-3aa43881221a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80",
