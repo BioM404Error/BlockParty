@@ -9,7 +9,7 @@ export default function Home() {
         google docs containing all our work so far :)
       </p>
       <br />
-      <a href="https://block-party.vercel.app/">Visit our project here</a>
+      <a href="https://OnTheBlock.vercel.app/">Visit our project here</a>
     </div>
   );
 }

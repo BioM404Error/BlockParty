@@ -29,6 +29,12 @@ export default function Milestones() {
       link="https://docs.google.com/document/d/e/2PACX-1vSeXVis6ncaekXRGnLfHoknwnwE8pFJ6qQ7VcL9kQ5Z3UueSr0rQFo_mTuxFvwf_ssIM18pX1XvtdG5/pub?embedded=true"
     />
   );
+  const milestone4 = (
+    <MilestoneEmbedded
+      name="Milestone 04"
+      link="https://docs.google.com/document/d/e/2PACX-1vQGztHnzDVMHYZJ0KqvxS72kdG9j3T-SgjAJJhaG40CrfV-8yqNI1cqOMMCTk0FPY9WL0gs1nqrtdei/pub?embedded=true"
+    />
+  );
   const [milestone, setMilestone] = useState(milestone1);
 
   const handleMilestoneChange = (milestone) => {
@@ -42,7 +48,6 @@ export default function Milestones() {
         variant="contained"
         onClick={() => handleMilestoneChange(milestone1)}
       >
-        {" "}
         Milestone 1
       </Button>
       <Button
@@ -58,7 +63,14 @@ export default function Milestones() {
         onClick={() => handleMilestoneChange(milestone3)}
       >
         Milestone 3
-      </Button>{" "}
+      </Button>
+      <Button
+        className={classes.button}
+        variant="contained"
+        onClick={() => handleMilestoneChange(milestone4)}
+      >
+        Milestone 4
+      </Button>
       <div className={classes.iframe}>{milestone}</div>
     </div>
   );
