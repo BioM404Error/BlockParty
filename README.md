@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Visit us at https://OnTheBlock.vercel.app/
 
-For our project milestones, please visit us at https://ontheblock-milestones.vercel.app/milestones
+For our project milestones, please visit us at https://OnTheBlock-milestones.vercel.app/milestones
 
 ## Survey Link at https://forms.gle/1FHAjp3aFjd9uWZ79
 
