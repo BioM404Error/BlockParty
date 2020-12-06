@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Visit us at https://block-party.vercel.app/
+## Visit us at https://OnTheBlock.vercel.app/
 
 For our project milestones, please visit us at https://block-party-milestones.vercel.app/
 
